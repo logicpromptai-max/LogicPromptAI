@@ -1,48 +1,55 @@
-# LogicPromptAI
+# LogicPrompt AI
 
-**LogicPromptAI** is a professional AI Workflow Automation website designed to showcase automation services that help businesses streamline operations, save time, reduce errors, and focus on high-value tasks.
+**LogicPrompt AI** is a professional AI Workflow Automation website built to showcase services that help small businesses streamline operations, reduce manual work, and focus on high-value tasks.
 
 ---
 
 ## 🌟 Overview
 
-This website highlights:
+This website demonstrates how AI-powered workflows can improve efficiency through:
 
-- AI Workflow Automation services
-- Portfolio of completed automation projects
-- Case studies demonstrating measurable results
-- Contact information for consultation
+- AI Workflow Automation
+- Google Workspace optimization
+- Zapier-based integrations
+- Internal systems and process automation
 
-The website is **fully responsive**, mobile-friendly, and built with **HTML, CSS, and JavaScript**.
+It is designed for **small businesses, coaches, and solopreneurs** seeking practical automation — not hype.
+
+---
+
+## 🚀 Live Website
+
+🔗 https://logicpromptai-max.github.io/LogicPromptAI/
 
 ---
 
 ## 🛠 Technology Stack
 
-- HTML5
-- CSS3
-- JavaScript
-- GitHub Pages (hosting)
+- HTML5  
+- CSS3  
+- JavaScript (Vanilla)  
+- GitHub Pages (Hosting)
 
 ---
 
-## 🚀 Features
+## ✨ Key Features
 
-- Clean, professional design with animated header gradient
-- Clickable portfolio screenshots with fullscreen modal
-- Fade-in sections on scroll for a modern feel
-- CTA button to schedule consultation via email
+- Clean, professional, mobile-responsive layout  
+- Fade-in sections triggered on scroll  
+- Clickable portfolio images with fullscreen modal  
+- Clear call-to-action for free consultation  
+- Lightweight, fast-loading, no external frameworks  
 
 ---
 
 ## 📁 File Structure
 
-/ (root)
-│── index.html
-│── portfolio.html
-│── case-studies.html
-│── style.css
-│── script.js
+/
+├── index.html
+├── portfolio.html
+├── case-studies.html
+├── style.css
+├── script.js
 └── assets/
 ├── logo.png
 └── screenshots/
@@ -55,12 +62,13 @@ The website is **fully responsive**, mobile-friendly, and built with **HTML, CSS
 
 ## 📧 Contact
 
-For inquiries or to schedule a consultation:  
-Email: [logicprompt.ai@gmail.com](mailto:logicprompt.ai@gmail.com)
+For inquiries or to schedule a free consultation:  
+📩 **logicprompt.ai@gmail.com**
 
 ---
 
 ## 📌 Notes
 
-- Hosted on GitHub Pages
-- Designed to scale for future automation integrations (Google Workspace, Zapier, AI tools)
+- Hosted via GitHub Pages  
+- Built with scalability in mind for future integrations  
+- Focused on real-world automation use cases
