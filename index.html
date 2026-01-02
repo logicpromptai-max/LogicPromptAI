@@ -4,24 +4,20 @@
   <meta charset="UTF-8">
   <title>LogicPrompt AI | Strategic Business Architecture</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Engineering bespoke AI ecosystems and n8n workflows for high-growth businesses.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-  <img src="assets/logo.png" class="logo" alt="LogicPrompt AI Logo">
   <nav>
     <a href="index.html">Home</a>
     <a href="solutions.html">Solutions</a>
     <a href="case-studies.html">Research & Specs</a>
     <a href="#schedule">Book Audit</a>
   </nav>
-
-  <h1 class="fade-in">Stop Managing Tasks. Start Scaling Systems.</h1>
-  <p class="fade-in">We engineer bespoke AI Agents and n8n workflows that act as a 24/7 digital workforce for your operations.</p>
-  
-  <div class="header-btns">
+  <h1>Stop Managing Tasks. Start Scaling Systems.</h1>
+  <p>Engineering bespoke AI ecosystems and n8n workflows for high-growth operations.</p>
+  <div style="margin-top:30px;">
     <a href="#schedule" class="cta-button primary">Schedule System Audit</a>
     <a href="solutions.html" class="cta-button secondary">View Live Demos</a>
   </div>
@@ -29,32 +25,21 @@
 
 <section id="savings-calculator" class="fade-in">
   <div class="project-card highlight">
-    <h2>The Cost of Inaction</h2>
-    <p>Calculate the annual capital leakage caused by repetitive administrative tasks.</p>
+    <h2 style="color: var(--accent-growth);">Identify Capital Leakage</h2>
+    <p>Discover the annual savings potential of automating your repetitive workflows.</p>
     <div class="calc-group">
       <input type="number" id="hours" placeholder="Weekly Waste (Hours)">
       <input type="number" id="rate" placeholder="Hourly Value ($)">
-      <button onclick="calculateSavings()" class="cta-button primary">Run Financial Audit</button>
+      <button onclick="calculateSavings()" class="cta-button primary">Calculate ROI</button>
+    </div>
+    <div id="lead-capture" style="display:none; margin-top: 20px; border-top: 1px solid #334155; padding-top: 20px;">
+        <p><strong>Your ROI Report is ready.</strong> Where should we send the full technical breakdown?</p>
+        <div class="calc-group">
+            <input type="email" id="lead-email" placeholder="Enter Business Email">
+            <button onclick="submitLead()" class="cta-button primary" style="background: var(--accent-growth);">Get Report</button>
+        </div>
     </div>
     <h3 id="result" class="roi-highlight"></h3>
-  </div>
-</section>
-
-<section id="expertise" class="fade-in">
-  <h2>Engineered for Precision</h2>
-  <div class="process-grid">
-    <div class="step">
-      <h4>Reliability First</h4>
-      <p>Built with n8n for 99.9% uptime and complex error-handling branches.</p>
-    </div>
-    <div class="step">
-      <h4>Data Sovereignty</h4>
-      <p>We prioritize private deployments. Your data never trains public AI models.</p>
-    </div>
-    <div class="step">
-      <h4>Scalable Logic</h4>
-      <p>Systems designed to handle 10 tasks or 10,000 with surgical precision.</p>
-    </div>
   </div>
 </section>
 
@@ -62,8 +47,7 @@
   <h2>Secure Your Strategy Session</h2>
   <div class="calendar-container">
     <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3uEzDKQdEGVFy3aTN4AvV8RR8BfRlMmRkJUXCJvX5C796SWXxnUwglGZlL8cwebDqeMpL4ZV5S?gv=true" style="border: 0" width="100%" height="700" frameborder="0"></iframe>
-    </div>
-  <p class="direct-contact">Direct Inquiry: <a href="mailto:logicprompt.ai@gmail.com">logicprompt.ai@gmail.com</a></p>
+  </div>
 </section>
 
 <script src="script.js"></script>
