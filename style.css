@@ -1,22 +1,37 @@
 :root {
-  --primary: #4CAF50;
-  --bg-dark: #0a0e14;
-  --card-bg: #161b22;
-  --text-main: #e6edf3;
+  --bg-deep: #0f172a;       /* Trust & Authority */
+  --card-bg: #1e293b;       /* Professional Depth */
+  --accent-growth: #10b981; /* Profit & Success */
+  --accent-precision: #fbbf24; /* Intelligence & "Aha!" */
+  --text-primary: #f8fafc;
 }
-body { margin: 0; font-family: 'Inter', sans-serif; background: var(--bg-dark); color: var(--text-main); line-height: 1.6; }
-header { text-align: center; padding: 80px 20px; background: radial-gradient(circle at center, #1a2c38 0%, #0a0e14 100%); }
-nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
-.cta-button { padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block; cursor: pointer; transition: 0.3s; }
-.primary { background: var(--primary); color: white; border: none; }
-.secondary { border: 1px solid var(--text-main); color: var(--text-main); margin-left: 10px; }
-.calc-group { display: flex; gap: 15px; justify-content: center; margin: 20px 0; flex-wrap: wrap; }
-input { padding: 12px; border-radius: 6px; border: 1px solid #30363d; background: #0d1117; color: white; width: 180px; }
-.roi-highlight { color: var(--primary); font-size: 2rem; font-weight: bold; }
-.video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-.video-container iframe { width: 100%; aspect-ratio: 16/9; border-radius: 12px; }
-.project-card.highlight { background: var(--card-bg); padding: 30px; border-radius: 12px; border: 1px solid #30363d; text-align: left; }
-.calendar-container { background: white; border-radius: 15px; overflow: hidden; margin: 30px 0; }
-.fade-in { opacity: 0; transform: translateY(20px); transition: 0.8s ease; }
-.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+body { margin: 0; font-family: 'Inter', sans-serif; background-color: var(--bg-deep); color: var(--text-primary); line-height: 1.6; }
+
+header { 
+  text-align: center; 
+  padding: 100px 20px; 
+  background: radial-gradient(circle at top right, #1e293b 0%, #0f172a 100%);
+  border-bottom: 1px solid #334155;
+}
+
+nav a { color: #94a3b8; margin: 0 15px; text-decoration: none; font-weight: 500; transition: 0.3s; }
+nav a:hover { color: var(--accent-precision); }
+
+.cta-button { padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block; cursor: pointer; transition: 0.3s; border: none; }
+.primary { background: var(--accent-precision); color: #000; }
+.secondary { border: 1px solid var(--text-primary); color: var(--text-primary); margin-left: 10px; background: transparent; }
+
+#savings-calculator .project-card {
+  border: 2px solid var(--accent-growth);
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.1);
+}
+
+.roi-highlight { color: var(--accent-growth); font-size: 2.2rem; font-weight: bold; margin-top: 20px; }
+.project-card.highlight { background: var(--card-bg); padding: 30px; border-radius: 12px; border: 1px solid #334155; text-align: left; }
+.calc-group { display: flex; gap: 10px; justify-content: center; margin: 20px 0; flex-wrap: wrap; }
+input { padding: 12px; border-radius: 6px; border: 1px solid #334155; background: #0f172a; color: white; width: 200px; }
+.calendar-container { background: white; border-radius: 15px; overflow: hidden; margin: 30px 0; border: 3px solid var(--accent-precision); }
 section { max-width: 1100px; margin: auto; padding: 60px 20px; text-align: center; }
+.fade-in { opacity: 0; transform: translateY(20px); transition: 0.8s ease-out; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
