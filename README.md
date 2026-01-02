@@ -1,74 +1,21 @@
-# LogicPrompt AI
+# LogicPrompt AI | Strategic Systems Architecture
 
-**LogicPrompt AI** is a professional AI Workflow Automation website built to showcase services that help small businesses streamline operations, reduce manual work, and focus on high-value tasks.
-
----
-
-## 🌟 Overview
-
-This website demonstrates how AI-powered workflows can improve efficiency through:
-
-- AI Workflow Automation
-- Google Workspace optimization
-- Zapier-based integrations
-- Internal systems and process automation
-
-It is designed for **small businesses, coaches, and solopreneurs** seeking practical automation — not hype.
+**LogicPrompt AI** engineers bespoke AI ecosystems that recapture 20-40+ hours of manual labor per week.
 
 ---
 
 ## 🚀 Live Website
-
-🔗 https://logicpromptai-max.github.io/LogicPromptAI/
-
----
-
-## 🛠 Technology Stack
-
-- HTML5  
-- CSS3  
-- JavaScript (Vanilla)  
-- GitHub Pages (Hosting)
+🔗 [logicpromptai-max.github.io/LogicPromptAI/](https://logicpromptai-max.github.io/LogicPromptAI/)  
+📅 **Schedule a Systems Audit:** [Book Here](https://calendar.app.google/TSHK7KVkxbUogKcz6)
 
 ---
 
-## ✨ Key Features
-
-- Clean, professional, mobile-responsive layout  
-- Fade-in sections triggered on scroll  
-- Clickable portfolio images with fullscreen modal  
-- Clear call-to-action for free consultation  
-- Lightweight, fast-loading, no external frameworks  
-
----
-
-## 📁 File Structure
-
-/
-├── index.html
-├── portfolio.html
-├── case-studies.html
-├── style.css
-├── script.js
-└── assets/
-├── logo.png
-└── screenshots/
-├── project1.png
-├── project2.png
-└── project3.png
-
+## 🛠 Tech Stack
+* **Workflow Engine:** n8n & Zapier Architecture
+* **Intelligence:** GPT-4o, Claude 3.5 Sonnet
+* **Integrations:** Google Workspace, CRMs, Slack
 
 ---
 
 ## 📧 Contact
-
-For inquiries or to schedule a free consultation:  
-📩 **logicprompt.ai@gmail.com**
-
----
-
-## 📌 Notes
-
-- Hosted via GitHub Pages  
-- Built with scalability in mind for future integrations  
-- Focused on real-world automation use cases
+📩 **[logicprompt.ai@gmail.com](mailto:logicprompt.ai@gmail.com)**
