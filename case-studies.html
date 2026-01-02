@@ -7,19 +7,38 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <header>
-  <nav><a href="index.html">Home</a><a href="solutions.html">Solutions</a><a href="case-studies.html">Research & Specs</a></nav>
-  <h1>Technical Proof of Concept</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="solutions.html">Solutions</a>
+    <a href="case-studies.html" class="active">Research & Specs</a>
+    <a href="index.html#schedule">Book Audit</a>
+  </nav>
+  <h1>Systems Research & Technical Specs</h1>
+  <p>Rigorous proof-of-concept testing for AI-driven operational scaling.</p>
 </header>
+
 <section class="fade-in">
   <div class="project-card highlight">
-    <h2>PoC #01: Lead Intelligence Engine</h2>
-    <p><strong>Architecture:</strong> n8n + GPT-4o + Custom Web Scrapers.</p>
+    <h2>PoC #01: Autonomous Lead Intelligence</h2>
+    <p><strong>The Challenge:</strong> Manual lead qualification was bottlenecking a sales team, costing 15+ hours/week in data entry.</p>
+    <p><strong>The Logic:</strong> Engineered an n8n workflow that scrapes inbound signals, qualifies them via GPT-4o, and routes "hot" leads to Slack instantly.</p>
+    <p><strong>Technical Stack:</strong> n8n, OpenAI API, Custom Python Scrapers, Slack Webhooks.</p>
   </div>
-  <div class="project-card highlight" style="margin-top:20px;">
-    <h2>PoC #02: Content Multiplier Framework</h2>
-    <p><strong>Architecture:</strong> n8n + Claude 3.5 Sonnet + YouTube API.</p>
+
+  <div class="project-card highlight" style="margin-top: 30px;">
+    <h2>PoC #02: Content Multiplier Engine</h2>
+    <p><strong>The Challenge:</strong> High-ticket consultants wasting 10 hours/week formatting newsletters from video transcripts.</p>
+    <p><strong>The Logic:</strong> A multi-branch system that ingests YouTube URLs, extracts transcripts, and generates SEO-optimized articles and 10+ social snippets.</p>
+    <p><strong>Technical Stack:</strong> Zapier, Claude 3.5 Sonnet, Google Docs API, Ghost CMS.</p>
   </div>
 </section>
+
+<section class="fade-in" style="text-align: center;">
+    <a href="index.html#schedule" class="cta-button primary">View Engineering Specs</a>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
