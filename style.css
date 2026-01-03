@@ -217,27 +217,25 @@ section {
 /* ===========================
    Video & Gallery
 =========================== */
-.video-grid {
+.gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-}
-
-.video-container iframe {
-  width: 100%;
-  height: 200px;
-  border-radius: 8px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 .gallery-img {
   width: 100%;
+  height: auto;
   border-radius: 8px;
   cursor: pointer;
   transition: transform 0.3s;
 }
 
 .gallery-img:hover {
-  transform: scale(1.02);
+  transform: scale(1.05);
+}
+
 }
 
 /* Lightbox */
@@ -299,3 +297,4 @@ toggle.addEventListener('click', () => {
         document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
 });
 </script>
+
