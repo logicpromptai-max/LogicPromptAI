@@ -1,32 +1,41 @@
-// ROI & Lead Capture
-function calculateSavings() {
-    const h = document.getElementById('hours').value;
-    const r = document.getElementById('rate').value;
-    if(h && r) { document.getElementById('lead-capture').style.display = 'block'; }
-}
-
 async function submitLead() {
-    const name = document.getElementById('lead-name').value;
-    const biz = document.getElementById('lead-biz').value;
-    const email = document.getElementById('lead-email').value;
-    const annual = document.getElementById('hours').value * document.getElementById('rate').value * 52;
-    const result = document.getElementById('result');
+  const email = document.getElementById('lead-email').value;
+  const hours = document.getElementById('hours').value;
+  const rate = document.getElementById('rate').value;
+  const result = document.getElementById('result');
+  const annual = hours * rate * 52;
 
-    if(name && biz && email.includes('@')) {
-        result.innerText = "Processing Logic...";
-        try {
-            await fetch('https://sheetdb.io/api/v1/m43zmyhch2qvd', {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({data:[{"Date": new Date().toLocaleDateString(), "Full Name": name, "Email": email, "Business Name": biz, "Potential Savings": annual}]})
-            });
-            result.innerText = `Annual Capital Leakage Identified: $${annual.toLocaleString()}`;
-        } catch(e){ result.innerText = "Sync complete. Leakage: $" + annual.toLocaleString(); }
+  if (email.includes('@')) {
+    // Show loading state
+    result.innerText = "Processing your report...";
+
+    const data = {
+      "Date": new Date().toLocaleDateString(),
+      "Email": email,
+      "Weekly Hours": hours,
+      "Hourly Rate": rate,
+      "Potential Savings": annual
+    };
+
+    try {
+      // REPLACE the URL below with your SheetDB API URL
+      const response = await fetch('https://sheetdb.io/api/v1/YOUR_SHEETDB_ID', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ data: [data] })
+      });
+
+      if (response.ok) {
+        result.innerText = `Estimated Annual Savings: $${annual.toLocaleString()}`;
+        document.getElementById('lead-capture').innerHTML = `
+          <p style="color: var(--accent-growth);">Success! Your report is being generated and sent to ${email}.</p>
+          <p><strong>Next Step:</strong> Book your strategy session below.</p>`;
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      result.innerText = "There was a connection error, but your ROI is: $" + annual.toLocaleString();
     }
+  } else {
+    alert("Please enter a valid business email.");
+  }
 }
-
-// Fade-in observer
-const obs = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add("visible"); });
-}, { threshold: 0.1 });
-document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
