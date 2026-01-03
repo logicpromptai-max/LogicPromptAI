@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>LogicPrompt AI | Workflow Architecture</title>
+  <title>LogicPrompt AI | Strategic Business Architecture</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -11,33 +11,31 @@
 <header>
   <nav>
     <a href="index.html">Home</a>
-    <a href="solutions.html">Solutions</a>
-    <a href="case-studies.html">Systems Research</a>
+    <a href="solutions.html">Systems</a>
+    <a href="case-studies.html">Research & Specs</a>
     <a href="#schedule">Book Audit</a>
   </nav>
-  <h1>Automate the Busy Work. <br><span style="color: var(--accent-growth);">Focus on Growth.</span></h1>
-  <p>We engineer bespoke AI ecosystems that recapture 20+ hours of manual labor per week for high-growth operations.</p>
-  <a href="#schedule" class="cta-button primary" style="margin-top: 30px;">Schedule a Systems Audit</a>
+  <h1>Stop Managing Tasks. <br><span style="color: var(--accent-growth);">Start Scaling Systems.</span></h1>
+  <p>LogicPrompt AI engineers and validates bespoke AI ecosystems before they are deployed.</p>
+  <a href="#savings-calculator" class="cta-button primary">Analyze Capital Leakage →</a>
 </header>
 
 <section id="savings-calculator" class="fade-in">
   <div class="project-card highlight">
     <h2 style="color: var(--accent-growth);">Identify Capital Leakage</h2>
-    <p>Discover the annual savings potential of automating your repetitive workflows.</p>
-    
+    <p>How much is manual process friction costing your operation?</p>
     <div class="calc-group">
       <input type="number" id="hours" placeholder="Weekly Waste (Hours)">
       <input type="number" id="rate" placeholder="Hourly Value ($)">
       <button onclick="calculateSavings()" class="cta-button primary">Calculate ROI</button>
     </div>
-
     <div id="lead-capture" style="display:none; margin-top: 20px; border-top: 1px solid #334155; padding-top: 20px;">
-        <p><strong>Your ROI Report is ready.</strong> Enter your details to reveal the breakdown.</p>
+        <h3>Your Audit Report is Ready</h3>
         <div class="calc-group" style="flex-direction: column; align-items: center; gap: 15px;">
-            <input type="text" id="lead-name" placeholder="Full Name" required style="width: 100%; max-width: 400px;">
-            <input type="text" id="lead-biz" placeholder="Business Name" required style="width: 100%; max-width: 400px;">
-            <input type="email" id="lead-email" placeholder="Business Email" required style="width: 100%; max-width: 400px;">
-            <button onclick="submitLead()" class="cta-button primary" style="background: var(--accent-growth); width: 100%; max-width: 400px;">Generate Audit Report</button>
+            <input type="text" id="lead-name" placeholder="Full Name" required>
+            <input type="text" id="lead-biz" placeholder="Business Name" required>
+            <input type="email" id="lead-email" placeholder="Business Email" required>
+            <button onclick="submitLead()" class="cta-button primary" style="background: var(--accent-growth); width: 100%;">Sync with LogicPrompt Systems</button>
         </div>
     </div>
     <h3 id="result" class="roi-highlight"></h3>
@@ -45,11 +43,12 @@
 </section>
 
 <section id="schedule" class="fade-in">
-  <h2>Book Your Live Mapping Session</h2>
-  <p>In 15 minutes, we will map one manual process into a scalable automation blueprint.</p>
+  <h2>Map Your System Live</h2>
+  <p>In 15 minutes, we will map one manual process into a scalable blueprint.</p>
   <div class="calendar-container">
-    <iframe src="https://calendar.google.com/calendar/appointments/schedules/YOUR_LINK_HERE" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+    <iframe src="https://calendar.app.google/TSHK7KVkxbUogKcz6" width="100%" height="600" frameborder="0"></iframe>
   </div>
+  <p style="margin-top:20px; color: var(--text-muted);">Email: <a href="mailto:logicprompt.ai@gmail.com" style="color: var(--accent-precision);">logicprompt.ai@gmail.com</a></p>
 </section>
 
 <script src="script.js"></script>
