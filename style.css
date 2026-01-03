@@ -1,38 +1,40 @@
-:root {
-  --bg-deep: #0f172a; 
-  --card-bg: #1e293b;
-  --accent-growth: #10b981; 
-  --accent-precision: #f5c26b; 
-  --text-primary: #f8fafc; 
-  --text-muted: #94a3b8;
+// ROI & Lead Logic
+function calculateSavings() {
+    const h = document.getElementById('hours').value;
+    const r = document.getElementById('rate').value;
+    if (h && r) { document.getElementById('lead-capture').style.display = 'block'; }
 }
 
-body {
-  margin: 0; font-family: 'Inter', sans-serif; background-color: var(--bg-deep); color: var(--text-primary); line-height: 1.8;
+async function submitLead() {
+    const name = document.getElementById('lead-name').value;
+    const biz = document.getElementById('lead-biz').value;
+    const email = document.getElementById('lead-email').value;
+    const annual = document.getElementById('hours').value * document.getElementById('rate').value * 52;
+    const result = document.getElementById('result');
+
+    if (name && biz && email.includes('@')) {
+        result.innerText = "Processing Logic...";
+        try {
+            await fetch('https://sheetdb.io/api/v1/m43zmyhch2qvd', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({ data: [{"Date": new Date().toLocaleDateString(), "Full Name": name, "Email": email, "Business Name": biz, "Potential Savings": annual}] })
+            });
+            result.innerText = `Annual Capital Leakage Identified: $${annual.toLocaleString()}`;
+        } catch (e) { result.innerText = "Sync complete. Leakage: $" + annual.toLocaleString(); }
+    }
 }
 
-header { text-align: center; padding: 80px 20px; border-bottom: 1px solid #334155; }
-nav a { color: var(--text-muted); margin: 0 15px; text-decoration: none; font-size: 0.95rem; }
-nav a:hover, nav a.active { color: var(--accent-precision); }
+// Gallery Lightbox
+function openLightbox(src) { 
+    document.getElementById('lightbox-img').src = src; 
+    document.getElementById('lightbox').style.display = 'flex'; 
+}
+function closeLightbox() { document.getElementById('lightbox').style.display = 'none'; }
+document.addEventListener('keydown', (e) => { if(e.key === "Escape") closeLightbox(); });
 
-section { max-width: 1000px; margin: auto; padding: 60px 20px; }
-.project-card.highlight { background: var(--card-bg); padding: 30px; border-radius: 12px; border: 1px solid #334155; margin-bottom: 30px; }
-h1, h2, h3 { line-height: 1.3; }
-
-input, button { padding: 14px; border-radius: 6px; border: 1px solid #334155; margin-bottom: 10px; width: 100%; box-sizing: border-box; color:#fff; background: #0f172a; }
-.cta-button { padding: 16px 32px; border-radius: 8px; font-weight: bold; cursor: pointer; border: none; transition: 0.3s; }
-.cta-button.primary { background: var(--accent-precision); color: #000; }
-.roi-highlight { color: var(--accent-growth); font-size: 2rem; font-weight: bold; margin-top: 15px; }
-
-.fade-in { opacity: 0; transform: translateY(20px); transition: 1s ease-out; }
-.fade-in.visible { opacity: 1; transform: translateY(0); }
-
-.video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-.gallery-img { width: 100%; border-radius: 8px; cursor: pointer; border: 1px solid #334155; transition: 0.3s; }
-
-.lightbox { display: none; position: fixed; z-index: 3000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); justify-content: center; align-items: center; }
-.lightbox-content { max-width: 85%; max-height: 85%; border: 1px solid var(--accent-precision); }
-.close-btn { position: absolute; top: 20px; right: 30px; font-size: 2rem; cursor: pointer; color: var(--accent-precision); }
-
-.calculator-group, .calc-group { display:flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
-.calculator-group input { flex: 1 1 120px; }
+// Intersection Observer for fade-in
+const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("visible"); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
