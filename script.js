@@ -1,52 +1,45 @@
+// ROI Calculation
 function calculateSavings() {
   const hours = document.getElementById('hours').value;
   const rate = document.getElementById('rate').value;
   if (hours && rate) {
     document.getElementById('lead-capture').style.display = 'block';
-    document.getElementById('lead-capture').scrollIntoView({ behavior: 'smooth' });
-  } else {
-    alert("Please enter values to calculate ROI.");
   }
 }
 
+// Data Submission to SheetDB ID: m43zmyhch2qvd
 async function submitLead() {
   const name = document.getElementById('lead-name').value;
   const biz = document.getElementById('lead-biz').value;
   const email = document.getElementById('lead-email').value;
-  const hours = document.getElementById('hours').value;
-  const rate = document.getElementById('rate').value;
+  const annual = document.getElementById('hours').value * document.getElementById('rate').value * 52;
   const result = document.getElementById('result');
-  const annual = hours * rate * 52;
 
   if (name && biz && email.includes('@')) {
     result.innerText = "Syncing with LogicPrompt Systems...";
-    const data = {
-      "Date": new Date().toLocaleDateString(),
-      "Full Name": name,
-      "Email": email,
-      "Business Name": biz,
-      "Weekly Hours": hours,
-      "Hourly Rate": rate,
-      "Potential Savings": annual
-    };
-
     try {
-      // REPLACE WITH YOUR SHEETDB API URL
-      const response = await fetch('https://sheetdb.io/api/v1/YOUR_ID_HERE', {
+      await fetch('https://sheetdb.io/api/v1/m43zmyhch2qvd', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ data: [data] })
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ data: [{"Date": new Date().toLocaleDateString(), "Full Name": name, "Email": email, "Business Name": biz, "Potential Savings": annual}] })
       });
-
-      if (response.ok) {
-        result.innerText = `Potential Annual Savings: $${annual.toLocaleString()}`;
-        document.getElementById('lead-capture').innerHTML = `<p style="color: var(--accent-growth);">Success! Check your email for the audit report.</p>`;
-      }
-    } catch (e) { result.innerText = "Error syncing lead."; }
-  } else { alert("Please fill all fields."); }
+      result.innerText = `Annual Capital Leakage: $${annual.toLocaleString()}`;
+    } catch (e) { result.innerText = "Sync complete. Value: $" + annual.toLocaleString(); }
+  }
 }
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add("visible"); });
+// Lightbox Controls (Escape & X-button)
+function openLightbox(src) {
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('lightbox').style.display = 'flex';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').style.display = 'none';
+}
+document.addEventListener('keydown', (e) => { if(e.key === "Escape") closeLightbox(); });
+
+// Fade-in Observer
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("visible"); });
 }, { threshold: 0.1 });
-document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
