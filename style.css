@@ -9,23 +9,28 @@ header { text-align: center; padding: 100px 20px; border-bottom: 1px solid #3341
 nav a { color: var(--text-muted); margin: 0 15px; text-decoration: none; font-size: 0.9rem; }
 nav a:hover { color: var(--accent-precision); }
 
-.project-card.highlight { background: var(--card-bg); padding: 40px; border-radius: 12px; border: 1px solid #334155; }
-.cta-button { padding: 16px 32px; border-radius: 8px; font-weight: bold; text-decoration: none; display: inline-block; cursor: pointer; border: none; }
-.primary { background: var(--accent-precision); color: #000; }
+section { max-width: 1000px; margin: auto; padding: 80px 20px; }
+.project-card.highlight { background: var(--card-bg); padding: 40px; border-radius: 12px; border: 1px solid #334155; margin-bottom: 20px; }
 
-.video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; }
-.video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-
-.gallery-img { width: 100%; border-radius: 8px; cursor: pointer; transition: 0.3s; border: 1px solid #334155; }
-.gallery-img:hover { transform: scale(1.02); border-color: var(--accent-precision); }
-
-/* Lightbox Styling */
-.lightbox { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); justify-content: center; align-items: center; }
-.lightbox-content { max-width: 80%; max-height: 80%; border: 2px solid var(--accent-precision); }
-.close-btn { position: absolute; top: 20px; right: 40px; color: white; font-size: 40px; cursor: pointer; }
-
+/* ROI & Forms */
 input { padding: 14px; border-radius: 6px; border: 1px solid #334155; background: #0f172a; color: white; margin-bottom: 10px; width: 100%; box-sizing: border-box; }
+.cta-button { padding: 16px 32px; border-radius: 8px; font-weight: bold; cursor: pointer; border: none; transition: 0.3s; }
+.primary { background: var(--accent-precision); color: #000; }
 .roi-highlight { color: var(--accent-growth); font-size: 2.5rem; font-weight: bold; margin-top: 20px; }
+
+/* Chatbot UI */
+#chat-widget { position: fixed; bottom: 20px; right: 20px; width: 320px; background: var(--card-bg); border: 1px solid #334155; border-radius: 12px; z-index: 2000; transition: 0.4s; overflow: hidden; }
+.chat-closed { height: 50px; }
+#chat-header { padding: 15px; background: #0f172a; cursor: pointer; display: flex; justify-content: space-between; font-weight: bold; border-bottom: 1px solid #334155; }
+#chat-body { height: 350px; display: flex; flex-direction: column; padding: 15px; }
+#chat-logs { flex-grow: 1; overflow-y: auto; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 10px; }
+.bot-msg { border-left: 2px solid var(--accent-precision); padding-left: 10px; margin-bottom: 10px; }
+.user-msg { text-align: right; color: var(--accent-growth); margin-bottom: 10px; }
+
+/* Lightbox & Visuals */
 .fade-in { opacity: 0; transform: translateY(20px); transition: 1s ease-out; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
 .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.gallery-img { width: 100%; border-radius: 8px; cursor: pointer; border: 1px solid #334155; transition: 0.3s; }
+.lightbox { display: none; position: fixed; z-index: 3000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); justify-content: center; align-items: center; }
+.lightbox-content { max-width: 85%; max-height: 85%; border: 1px solid var(--accent-precision); }
