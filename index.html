@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Research & Specs | LogicPrompt AI</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>LogicPrompt AI | Strategic Business Architecture</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -15,91 +15,38 @@
     <a href="case-studies.html">Research & Specs</a>
     <a href="#schedule">Book Audit</a>
   </nav>
-  <h1>Systems Research & Technical Specs</h1>
-  <p>Proof-of-concept logic validated for real-world operations. Each system is stress-tested before deployment.</p>
-  <p style="font-style: italic; color: var(--accent-precision);">
-    These PoCs demonstrate our method. Implementations are tailored per client.
-  </p>
+  <h1>Stop Managing Tasks. <br><span style="color: var(--accent-growth);">Start Scaling Systems.</span></h1>
+  <p>LogicPrompt AI engineers and validates bespoke AI ecosystems before deployment.</p>
+  <a href="#savings-calculator" class="cta-button primary">Analyze Capital Leakage →</a>
 </header>
 
-<section class="fade-in">
-
-  <!-- PoC #01 -->
+<section id="savings-calculator" class="fade-in">
   <div class="project-card highlight">
-    <h2 style="color: var(--accent-growth);">PoC #01: AI Lead Intelligence Engine</h2>
-    <div class="spec-box">
-      <p><strong>Validation & Testing:</strong> Tested with 50–100 simulated leads/day; handles malformed inputs; manual QA for accuracy.</p>
-      <p><strong>Why This Architecture:</strong> Event-driven workflow reduces latency; GPT qualification for flexible criteria; Slack/Gmail routing reduces response time.</p>
-      <p><strong>Scalability Notes:</strong> Handles 10× lead volume; modular nodes allow CRM/channel swaps without rebuild.</p>
+    <h2 style="color: var(--accent-growth);">Identify Capital Leakage</h2>
+    <p>How much is manual process friction costing your operation?</p>
+    <div class="calc-group">
+      <input type="number" id="hours" placeholder="Weekly Waste (Hours)">
+      <input type="number" id="rate" placeholder="Hourly Value ($)">
+      <button onclick="calculateSavings()" class="cta-button primary">Calculate ROI</button>
     </div>
-    <div class="diagram-box">
-      <p><strong>Visual Logic Flow:</strong></p>
-      <pre style="background:#1e293b; padding:10px; border-radius:8px; color:#f5c26b;">
-Input → Normalize → Classify → Route → Log
-- Lead Intake
-- AI Qualification
-- Slack Routing
-- Notion Logging
-      </pre>
+    <div id="lead-capture" style="display:none; margin-top: 20px; border-top: 1px solid #334155; padding-top: 20px;">
+      <h3>Your Audit Report is Ready</h3>
+      <div class="calc-group" style="flex-direction: column; align-items: center; gap: 15px;">
+        <input type="text" id="lead-name" placeholder="Full Name" required>
+        <input type="text" id="lead-biz" placeholder="Business Name" required>
+        <input type="email" id="lead-email" placeholder="Business Email" required>
+        <button onclick="submitLead()" class="cta-button primary" style="background: var(--accent-growth); width: 100%;">Sync with LogicPrompt Systems</button>
+      </div>
     </div>
-    <div class="real-world-benefit">
-      <p><strong>Benefit:</strong> Saves 20–30 hours/week in lead triage; reduces missed opportunities.</p>
-    </div>
+    <h3 id="result" class="roi-highlight"></h3>
   </div>
-
-  <!-- PoC #02 -->
-  <div class="project-card highlight">
-    <h2 style="color: var(--accent-growth);">PoC #02: Content Automation Engine</h2>
-    <div class="spec-box">
-      <p><strong>Validation & Testing:</strong> Tested with 25–50 content submissions/day; handles malformed metadata; QA on tagging/categorization.</p>
-      <p><strong>Why This Architecture:</strong> GPT-based categorization avoids manual sorting; n8n automates repeated tasks; scalable to multiple channels (Instagram, LinkedIn, blog).</p>
-      <p><strong>Scalability Notes:</strong> Processes 5× current content volume; modular to plug in new AI models.</p>
-    </div>
-    <div class="diagram-box">
-      <p><strong>Visual Logic Flow:</strong></p>
-      <pre style="background:#1e293b; padding:10px; border-radius:8px; color:#f5c26b;">
-Submission → Normalize → Classify → Tag → Publish Queue
-- Content Intake
-- GPT Classification
-- Multi-channel Routing
-      </pre>
-    </div>
-    <div class="real-world-benefit">
-      <p><strong>Benefit:</strong> Cuts 8–12 hours/week; ensures consistent content quality.</p>
-    </div>
-  </div>
-
-  <!-- PoC #03 -->
-  <div class="project-card highlight">
-    <h2 style="color: var(--accent-growth);">PoC #03: Ops Triage & Task Orchestration</h2>
-    <div class="spec-box">
-      <p><strong>Validation & Testing:</strong> Tested with multi-channel task influx: email, forms, Slack; auto SLA tagging and priority classification; QA checks on routing accuracy.</p>
-      <p><strong>Why This Architecture:</strong> Central intake reduces lost/delayed tasks; AI classification speeds decision-making; modular to integrate with Notion / Linear / ClickUp.</p>
-      <p><strong>Scalability Notes:</strong> Handles 10× task volume; nodes can be swapped for new platforms without rebuild.</p>
-    </div>
-    <div class="diagram-box">
-      <p><strong>Visual Logic Flow:</strong></p>
-      <pre style="background:#1e293b; padding:10px; border-radius:8px; color:#f5c26b;">
-Request → Normalize → AI Classification → Route → Log
-- Intake Normalization
-- Priority Classification
-- Routing
-- SLA Tracker
-      </pre>
-    </div>
-    <div class="real-world-benefit">
-      <p><strong>Benefit:</strong> Eliminates missed follow-ups; reduces operational friction and human error.</p>
-    </div>
-  </div>
-
 </section>
 
-<!-- Schedule CTA -->
 <section id="schedule" class="fade-in">
   <h2>Map Your System Live</h2>
-  <p>In 15 minutes, we’ll map one manual process into a scalable blueprint. No proposal required — exploratory & risk-free.</p>
+  <p>In 15 minutes, we’ll map one manual process into a scalable blueprint. No proposal required.</p>
   <div class="calendar-container">
-    <iframe src="https://calendar.app.google/eCpgothwnWzbKZvT6" width="100%" height="600" frameborder="0"></iframe>
+    <iframe src="https://calendar.app.google/eCpgothwnWzbKZvT6" frameborder="0"></iframe>
   </div>
   <p style="margin-top:20px; color: var(--text-muted);">
     Email: <a href="mailto:logicprompt.ai@gmail.com" style="color: var(--accent-precision);">logicprompt.ai@gmail.com</a>
