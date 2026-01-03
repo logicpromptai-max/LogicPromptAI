@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>LogicPrompt AI | Scale Your Operations</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>LogicPrompt AI | Scale Your Operations</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -13,105 +13,49 @@
     <a href="index.html" class="active">Home</a>
     <a href="solutions.html">Solutions</a>
     <a href="case-studies.html">Research & Specs</a>
-    <a href="#decision">Book Audit</a>
+    <a href="#schedule">Book Audit</a>
   </nav>
-  <h1>Stop Managing Tasks. Start Scaling Systems.</h1>
-  <p>LogicPrompt AI designs, validates, and deploys AI workflow automations that save 20+ hours/week.</p>
+  <h1>Stop Managing Tasks.<br><span style="color: var(--accent-growth);">Start Scaling Systems.</span></h1>
+  <p>LogicPrompt AI engineers AI workflows to save time, reduce errors, and grow your operation efficiently.</p>
+  <a href="#savings-calculator" class="cta-button primary">Calculate Your ROI →</a>
 </header>
 
-<!-- Problem Awareness / ROI -->
-<section id="roi" class="fade-in">
-  <h2>Discover Your Workflow Leakage</h2>
-  <p>Enter your manual hours & value to see potential annual savings.</p>
-  <div class="calc-group">
-    <input type="number" id="hours" placeholder="Weekly Waste (Hours)">
-    <input type="number" id="rate" placeholder="Hourly Value ($)">
-    <button onclick="calculateSavings()" class="cta-button primary">Calculate ROI</button>
-  </div>
-  <div id="lead-capture" style="display:none; margin-top:20px;">
+<section id="problem" class="fade-in">
+  <h2>Is This You?</h2>
+  <p>Manual tasks, repetitive workflows, and lost leads are slowing your growth. Teams spend hours on work that AI can streamline.</p>
+</section>
+
+<section id="solution" class="fade-in">
+  <h2>Our Solution</h2>
+  <p>We design, validate, and deploy AI-driven workflow automation tailored to your business. No guesswork — only tested, modular systems.</p>
+</section>
+
+<section id="savings-calculator" class="fade-in">
+  <div class="project-card highlight">
+    <h2>Estimate Your Weekly Savings</h2>
+    <div class="calc-group">
+      <input type="number" id="hours" placeholder="Weekly Hours Spent Manually">
+      <input type="number" id="rate" placeholder="Hourly Rate ($)">
+      <button onclick="calculateSavings()" class="cta-button primary">Calculate ROI</button>
+    </div>
+
+    <div id="lead-capture" style="display:none; margin-top:20px;">
+      <h3>Capture Your Audit</h3>
       <input type="text" id="lead-name" placeholder="Full Name">
       <input type="text" id="lead-biz" placeholder="Business Name">
-      <input type="email" id="lead-email" placeholder="Email">
-      <button onclick="submitLead()" class="cta-button primary">Sync with LogicPrompt</button>
-      <h3 id="result" class="roi-highlight"></h3>
+      <input type="email" id="lead-email" placeholder="Business Email">
+      <button onclick="submitLead()" class="cta-button primary">Sync With LogicPrompt</button>
+    </div>
+    <h3 id="result" class="roi-highlight"></h3>
   </div>
 </section>
 
-<section id="roi-calculator" class="fade-in">
-  <h2>Estimate Your Potential ROI</h2>
-  <form id="roiForm">
-    <label>Full Name:</label>
-    <input type="text" id="fullName" required>
-
-    <label>Email:</label>
-    <input type="email" id="email" required>
-
-    <label>Business Name:</label>
-    <input type="text" id="businessName" required>
-
-    <label>Weekly Hours Spent on Task:</label>
-    <input type="number" id="weeklyHours" required>
-
-    <label>Hourly Rate (USD):</label>
-    <input type="number" id="hourlyRate" required>
-
-    <button type="submit" class="cta-button primary">Calculate & Submit</button>
-  </form>
-
-  <div id="roiResult" style="display:none; margin-top:20px; padding:15px; background:#f5c26b; color:#1F2933; border-radius:8px;">
-    <p><strong>Potential Weekly Savings: $<span id="savingsAmount"></span></strong></p>
-    <p>Thank you! Your info has been captured and our team may reach out.</p>
-  </div>
+<section id="schedule" class="fade-in">
+  <h2>Book a 15-Minute System Map</h2>
+  <iframe src="https://calendar.app.google/eCpgothwnWzbKZvT6" width="100%" height="600" frameborder="0"></iframe>
+  <p>Email: <a href="mailto:logicprompt.ai@gmail.com" style="color: var(--accent-precision);">logicprompt.ai@gmail.com</a></p>
 </section>
-
-  
-<!-- Logic / How it works -->
-<section id="logic" class="fade-in">
-  <h2>How Our Systems Work</h2>
-  <div class="video-grid">
-    <img src="assets/screenshots/project1.png" class="gallery-img" onclick="openLightbox(this.src)">
-    <img src="assets/screenshots/project2.png" class="gallery-img" onclick="openLightbox(this.src)">
-    <img src="assets/screenshots/project3.png" class="gallery-img" onclick="openLightbox(this.src)">
-  </div>
-</section>
-
-<!-- Proof / Demo Videos -->
-<section id="proof" class="fade-in">
-  <h2>See Proof in Action</h2>
-  <div class="video-grid">
-    <iframe src="https://www.youtube.com/embed/fj7RFXBar8Q" frameborder="0" allowfullscreen></iframe>
-    <iframe src="https://www.youtube.com/embed/nPURnt5qpco" frameborder="0" allowfullscreen></iframe>
-    <iframe src="https://www.youtube.com/embed/5pfyEx2SWU0" frameborder="0" allowfullscreen></iframe>
-  </div>
-</section>
-
-<!-- Certainty / Case Studies -->
-<section id="certainty" class="fade-in">
-  <h2>Engineering Specs & Case Studies</h2>
-  <p>Validation, testing, scalability notes, and real-world benefits for each PoC.</p>
-  <a href="case-studies.html" class="cta-button primary">View Engineering Specs</a>
-</section>
-
-<!-- Founder / Trust -->
-<section id="founder" class="fade-in">
-  <h2>Meet Klyde, Founder & Systems Architect</h2>
-  <p>10+ years experience in AI workflow automation. Designs and validates all PoCs personally.</p>
-  <a href="mailto:logicprompt.ai@gmail.com" class="cta-button primary">Talk to the Founder</a>
-</section>
-
-<!-- Decision / CTA -->
-<section id="decision" class="fade-in">
-  <h2>Map Your System Live</h2>
-  <p>15-min exploratory session, risk-free.</p>
-  <iframe src="https://calendar.app.google/eCpgothwnWzbKZvT6" width="100%" height="600"></iframe>
-</section>
-
-<div id="lightbox" class="lightbox" onclick="closeLightbox()">
-  <span class="close-btn">&times;</span>
-  <img class="lightbox-content" id="lightbox-img">
-</div>
 
 <script src="script.js"></script>
 </body>
 </html>
-
