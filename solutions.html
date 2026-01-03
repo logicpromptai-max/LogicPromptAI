@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <title>Solutions | LogicPrompt AI</title>
@@ -16,10 +16,14 @@
     <a href="#schedule">Book Audit</a>
   </nav>
   <h1>Our AI Workflow Demos</h1>
-  <p>See our systems in action: YouTube demos & screenshots of real automation flows.</p>
+  <p>See how LogicPrompt AI automates workflows with real-world proof.</p>
 </header>
 
+<!-- =========================
+     YouTube Demo Videos
+============================= -->
 <section class="fade-in">
+  <h2>Demo Videos</h2>
   <div class="video-grid">
     <div class="project-card highlight">
       <p>01 | Lead Automation</p>
@@ -42,6 +46,9 @@
   </div>
 </section>
 
+<!-- =========================
+     Screenshot Gallery
+============================= -->
 <section class="fade-in">
   <h2>Screenshots</h2>
   <div class="video-grid">
@@ -51,12 +58,48 @@
   </div>
 </section>
 
-<div id="lightbox" class="lightbox" onclick="closeLightbox()">
-  <span class="close-btn">&times;</span>
+<!-- =========================
+     ROI Calculator / Lead Capture
+============================= -->
+<section class="fade-in">
+  <h2>ROI Calculator</h2>
+  <p>Estimate potential weekly savings from automating your workflow:</p>
+  <div class="calc-group">
+    <input type="number" id="hours" placeholder="Weekly Hours Saved">
+    <input type="number" id="rate" placeholder="Hourly Rate ($)">
+    <button class="cta-button primary" onclick="calculateSavings()">Calculate</button>
+  </div>
+  <p id="result" class="roi-highlight"></p>
+
+  <div id="lead-capture" style="display:none; margin-top:1rem;">
+    <h3>Capture Your Lead</h3>
+    <input type="text" id="lead-name" placeholder="Full Name"><br><br>
+    <input type="text" id="lead-biz" placeholder="Business Name"><br><br>
+    <input type="email" id="lead-email" placeholder="Email"><br><br>
+    <button class="cta-button secondary" onclick="submitLead()">Submit Lead</button>
+  </div>
+</section>
+
+<!-- =========================
+     Lightbox for Screenshots
+============================= -->
+<div id="lightbox" class="lightbox">
+  <span class="close-btn" onclick="closeLightbox()">&times;</span>
   <img class="lightbox-content" id="lightbox-img">
 </div>
+
+<!-- =========================
+     Schedule CTA
+============================= -->
+<section id="schedule" class="fade-in" style="text-align:center;">
+  <h2>Map Your System Live</h2>
+  <p>15-minute session to map your workflow. No proposal required.</p>
+  <iframe src="https://calendar.app.google/eCpgothwnWzbKZvT6" width="100%" height="600" frameborder="0"></iframe>
+  <p style="margin-top:20px;">
+    Email: <a href="mailto:logicprompt.ai@gmail.com">logicprompt.ai@gmail.com</a>
+  </p>
+</section>
 
 <script src="script.js"></script>
 </body>
 </html>
-
