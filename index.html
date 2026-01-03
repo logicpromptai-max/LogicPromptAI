@@ -37,6 +37,34 @@
   </div>
 </section>
 
+<section id="roi-calculator" class="fade-in">
+  <h2>Estimate Your Potential ROI</h2>
+  <form id="roiForm">
+    <label>Full Name:</label>
+    <input type="text" id="fullName" required>
+
+    <label>Email:</label>
+    <input type="email" id="email" required>
+
+    <label>Business Name:</label>
+    <input type="text" id="businessName" required>
+
+    <label>Weekly Hours Spent on Task:</label>
+    <input type="number" id="weeklyHours" required>
+
+    <label>Hourly Rate (USD):</label>
+    <input type="number" id="hourlyRate" required>
+
+    <button type="submit" class="cta-button primary">Calculate & Submit</button>
+  </form>
+
+  <div id="roiResult" style="display:none; margin-top:20px; padding:15px; background:#f5c26b; color:#1F2933; border-radius:8px;">
+    <p><strong>Potential Weekly Savings: $<span id="savingsAmount"></span></strong></p>
+    <p>Thank you! Your info has been captured and our team may reach out.</p>
+  </div>
+</section>
+
+  
 <!-- Logic / How it works -->
 <section id="logic" class="fade-in">
   <h2>How Our Systems Work</h2>
@@ -86,3 +114,4 @@
 <script src="script.js"></script>
 </body>
 </html>
+
