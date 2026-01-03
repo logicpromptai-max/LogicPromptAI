@@ -1,6 +1,6 @@
-# LogicPrompt AI | Strategic Systems Architecture 🚀
+# LogicPrompt AI | Strategic Business Architecture 🚀
 
-**LogicPrompt AI** engineers bespoke AI ecosystems and n8n workflows that recapture 20-40+ hours of manual labor per week for high-growth operations.
+**LogicPrompt AI** engineers bespoke AI ecosystems and n8n workflows designed to recapture 20-40+ hours of manual labor per week for high-growth operations.
 
 ---
 
@@ -10,19 +10,28 @@
 
 ---
 
-## 🛠 Strategic Tech Stack
+## 🛠 Strategic Tech Stack & Integrations
 We build for reliability, precision, and data sovereignty:
 * **Core Engine:** n8n (Advanced Logic & API Orchestration)
-* **Automation:** Zapier (Seamless Cloud Integration)
-* **Intelligence:** GPT-4o & Claude 3.5 Sonnet
-* **Data:** Private Deployments & SQL/NoSQL Architectures
+* **Lead Capture:** Custom ROI Calculator with **SheetDB + Google Sheets** integration for real-time lead management.
+* **Automation:** Zapier (Seamless Cloud Integration for 6,000+ apps).
+* **Intelligence:** GPT-4o & Claude 3.5 Sonnet for qualifying and routing logic.
 
 ---
 
-## 📈 Conversion Tools Built-In
-* **ROI Calculator:** A psychological anchor that identifies "Capital Leakage" and captures inbound leads.
-* **Research & Specs:** Technical Proof of Concepts (PoC) for lead intelligence and content multiplication.
-* **Live Demos:** Integrated YouTube video library for immediate technical proof.
+## 📈 Key Built-in Features
+* **Lead Intelligence ROI Engine:** A psychological anchor that calculates "Capital Leakage" and captures B2B leads (Name, Business, Email).
+* **Systems Research (PoC):** Technical blueprints for Lead Intelligence, Content Multiplication, and Operational Triage.
+* **Automatic Lead Sync:** Integrated with Google Sheets to ensure 24/7 data capture even when local n8n instances are offline.
+
+---
+
+## 🏗 System Design Strategy
+Our approach follows the **LogicPrompt Validation Method**:
+1. **Identify Leakage:** Pinpoint manual task bottlenecks.
+2. **Architecture Mapping:** Design modular, event-driven workflows.
+3. **Stress Testing:** Validate failure handling and API timeout logic.
+4. **Deployment:** Production-ready systems that scale with 10x volume.
 
 ---
 
