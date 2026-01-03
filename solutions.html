@@ -16,25 +16,25 @@
     <a href="#schedule">Book Audit</a>
   </nav>
   <h1>Our AI Workflow Demos</h1>
-  <p>See our systems in action: YouTube demos & screenshots of real automation flows.</p>
+  <p>Experience how LogicPrompt AI automates real business processes with precision and speed.</p>
 </header>
 
 <section class="fade-in">
-  <h2>Demo Videos</h2>
+  <h2>Video Demos</h2>
   <div class="video-grid">
-    <div class="project-card highlight">
+    <div class="video-card">
       <p>01 | Lead Automation</p>
       <div class="video-container">
         <iframe src="https://www.youtube.com/embed/fj7RFXBar8Q" allowfullscreen></iframe>
       </div>
     </div>
-    <div class="project-card highlight">
+    <div class="video-card">
       <p>02 | SaaS Activation</p>
       <div class="video-container">
         <iframe src="https://www.youtube.com/embed/nPURnt5qpco" allowfullscreen></iframe>
       </div>
     </div>
-    <div class="project-card highlight">
+    <div class="video-card">
       <p>03 | E-Commerce ROI</p>
       <div class="video-container">
         <iframe src="https://www.youtube.com/embed/5pfyEx2SWU0" allowfullscreen></iframe>
@@ -44,44 +44,38 @@
 </section>
 
 <section class="fade-in">
-  <h2>Screenshots</h2>
-  <div class="video-grid">
-    <img src="assets/screenshots/project1.png" class="gallery-img" onclick="openLightbox(this.src)">
-    <img src="assets/screenshots/project2.png" class="gallery-img" onclick="openLightbox(this.src)">
-    <img src="assets/screenshots/project3.png" class="gallery-img" onclick="openLightbox(this.src)">
+  <h2>Screenshots of Workflows</h2>
+  <div class="screenshot-grid">
+    <img src="assets/screenshots/project1.png" class="gallery-img" onclick="openLightbox(this.src)" alt="Workflow Screenshot 1">
+    <img src="assets/screenshots/project2.png" class="gallery-img" onclick="openLightbox(this.src)" alt="Workflow Screenshot 2">
+    <img src="assets/screenshots/project3.png" class="gallery-img" onclick="openLightbox(this.src)" alt="Workflow Screenshot 3">
   </div>
 </section>
 
-<section class="fade-in">
-  <h2>ROI Calculator</h2>
-  <p>Estimate potential weekly savings from automating your workflow:</p>
-  <div class="calc-group">
-    <input type="number" id="hours" placeholder="Weekly Hours Saved">
-    <input type="number" id="rate" placeholder="Hourly Rate ($)">
-    <button class="cta-button primary" onclick="calculateSavings()">Calculate</button>
-  </div>
-  <p id="result" class="roi-highlight"></p>
-
-  <div id="lead-capture" style="display:none; margin-top:1rem;">
-    <h3>Capture Your Lead</h3>
-    <input type="text" id="lead-name" placeholder="Full Name"><br><br>
-    <input type="text" id="lead-biz" placeholder="Business Name"><br><br>
-    <input type="email" id="lead-email" placeholder="Email"><br><br>
-    <button class="cta-button secondary" onclick="submitLead()">Submit Lead</button>
-  </div>
-</section>
-
-<div id="lightbox" class="lightbox">
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
   <span class="close-btn" onclick="closeLightbox()">&times;</span>
   <img class="lightbox-content" id="lightbox-img">
 </div>
 
-<section id="schedule" class="fade-in" style="text-align:center;">
-  <h2>Map Your System Live</h2>
-  <p>15-minute session. No proposal required.</p>
-  <iframe src="https://calendar.app.google/eCpgothwnWzbKZvT6" width="100%" height="600" frameborder="0"></iframe>
-  <p style="margin-top:20px;">
-    Email: <a href="mailto:logicprompt.ai@gmail.com">logicprompt.ai@gmail.com</a>
+<section id="schedule" class="fade-in">
+  <h2>ROI Calculator & Lead Capture</h2>
+  <p>Estimate the time & cost savings your team can achieve. Submit your info to capture leads instantly.</p>
+  <div class="calc-group">
+    <input type="number" id="hours" placeholder="Weekly Hours">
+    <input type="number" id="rate" placeholder="Hourly Rate">
+    <button class="cta-button primary" onclick="calculateSavings()">Calculate Savings</button>
+  </div>
+  <p id="result" class="roi-highlight"></p>
+
+  <div id="lead-capture" style="display:none; margin-top:1rem;">
+    <input type="text" id="lead-name" placeholder="Full Name">
+    <input type="text" id="lead-biz" placeholder="Business Name">
+    <input type="email" id="lead-email" placeholder="Email">
+    <button class="cta-button secondary" onclick="submitLead()">Submit Lead</button>
+  </div>
+  <p style="margin-top:10px; color: var(--text-muted);">
+    Email: <a href="mailto:logicprompt.ai@gmail.com" style="color: var(--accent-precision);">logicprompt.ai@gmail.com</a>
   </p>
 </section>
 
