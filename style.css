@@ -1,241 +1,30 @@
-// ROI & Lead Logic
-function calculateSavings() {
-    const h = document.getElementById('hours').value;
-    const r = document.getElementById('rate').value;
-    if (h && r) { document.getElementById('lead-capture').style.display = 'block'; }
-}
-
-async function submitLead() {
-    const name = document.getElementById('lead-name').value;
-    const biz = document.getElementById('lead-biz').value;
-    const email = document.getElementById('lead-email').value;
-    const annual = document.getElementById('hours').value * document.getElementById('rate').value * 52;
-    const result = document.getElementById('result');
-
-    if (name && biz && email.includes('@')) {
-        result.innerText = "Processing Logic...";
-        try {
-            await fetch('https://sheetdb.io/api/v1/m43zmyhch2qvd', {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({ data: [{"Date": new Date().toLocaleDateString(), "Full Name": name, "Email": email, "Business Name": biz, "Potential Savings": annual}] })
-            });
-            result.innerText = `Annual Capital Leakage Identified: $${annual.toLocaleString()}`;
-        } catch (e) { result.innerText = "Sync complete. Leakage: $" + annual.toLocaleString(); }
-    }
-}
-
-// Gallery Lightbox
-function openLightbox(src) { 
-    document.getElementById('lightbox-img').src = src; 
-    document.getElementById('lightbox').style.display = 'flex'; 
-}
-function closeLightbox() { document.getElementById('lightbox').style.display = 'none'; }
-document.addEventListener('keydown', (e) => { if(e.key === "Escape") closeLightbox(); });
-
-// Intersection Observer for fade-in
-const obs = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("visible"); });
-}, { threshold: 0.1 });
-document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
-
 /* ===========================
-   Base Variables
+   Video & Screenshot Grids
 =========================== */
-:root {
-  /* Light Mode Palette */
-  --bg-color: #f5f7fa;
-  --text-color: #1f2933;
-  --accent-growth: #3b82f6; /* Blue for headings/CTAs */
-  --accent-precision: #2f8f9d; /* Subtle blue-teal */
-  --highlight-amber: #f5c26b;
-  --card-bg: #ffffff;
-  --card-border: #d1d5db;
-  --roi-highlight: #2f8f9d;
-  --text-muted: #6b7280;
-}
-
-[data-theme="dark"] {
-  --bg-color: #1e293b;
-  --text-color: #f5f7fa;
-  --accent-growth: #3b82f6;
-  --accent-precision: #2F8F9D;
-  --highlight-amber: #f5c26b;
-  --card-bg: #2a2f36;
-  --card-border: #374151;
-  --roi-highlight: #3b82f6;
-  --text-muted: #9ca3af;
-}
-
-/* ===========================
-   Global Styles
-=========================== */
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  line-height: 1.6;
-}
-
-a {
-  color: var(--accent-precision);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-h1, h2, h3 {
-  font-weight: 700;
-}
-
-p {
-  margin: 0.5rem 0;
-}
-
-/* ===========================
-   Header & Navigation
-=========================== */
-header {
-  text-align: center;
-  padding: 2rem 1rem;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-bottom: 1rem;
-}
-
-nav a {
-  font-weight: 600;
-  padding: 0.5rem 0.8rem;
-  border-radius: 6px;
-  transition: background 0.3s;
-}
-
-nav a.active,
-nav a:hover {
-  background-color: var(--accent-growth);
-  color: #ffffff;
-}
-
-/* ===========================
-   Sections
-=========================== */
-section {
-  padding: 3rem 1rem;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.fade-in {
-  animation: fadeIn 1s ease-in forwards;
-}
-
-@keyframes fadeIn {
-  from {opacity: 0; transform: translateY(20px);}
-  to {opacity: 1; transform: translateY(0);}
-}
-
-/* ===========================
-   Project Cards / PoCs
-=========================== */
-.project-card {
-  background-color: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 10px;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-}
-
-.project-card h2 {
-  margin-bottom: 1rem;
-}
-
-.diagram-box pre {
-  background-color: #1e293b;
-  color: var(--highlight-amber);
-  padding: 10px;
-  border-radius: 8px;
-  overflow-x: auto;
-}
-
-.real-world-benefit {
-  margin-top: 1rem;
-  background-color: #f5f7fa;
-  border-left: 4px solid var(--highlight-amber);
-  padding: 0.5rem 1rem;
-}
-
-[data-theme="dark"] .real-world-benefit {
-  background-color: #2a2f36;
-}
-
-/* ===========================
-   Buttons & CTA
-=========================== */
-.cta-button {
-  font-weight: 700;
-  padding: 0.8rem 1.5rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border: none;
-}
-
-.cta-button.primary {
-  background-color: var(--accent-growth);
-  color: #ffffff;
-}
-
-.cta-button.primary:hover {
-  background-color: var(--accent-precision);
-}
-
-.cta-button.secondary {
-  background-color: var(--highlight-amber);
-  color: #1f2933;
-}
-
-.calc-group input {
-  padding: 0.6rem;
-  margin-right: 0.5rem;
-  border-radius: 6px;
-  border: 1px solid var(--card-border);
-  width: 200px;
-}
-
-.calc-group button {
-  margin-top: 0.5rem;
-}
-
-/* ===========================
-   Video & Gallery
-=========================== */
-.gallery-grid {
+.video-grid, .screenshot-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
   margin-top: 1rem;
+}
+
+.video-container iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  border: none;
 }
 
 .gallery-img {
   width: 100%;
-  height: auto;
+  object-fit: cover;
   border-radius: 8px;
   cursor: pointer;
   transition: transform 0.3s;
 }
 
 .gallery-img:hover {
-  transform: scale(1.05);
-}
-
+  transform: scale(1.03);
 }
 
 /* Lightbox */
@@ -266,35 +55,16 @@ section {
 }
 
 /* ===========================
-   ROI Result Highlight
+   Video & Screenshot Card
 =========================== */
-.roi-highlight {
-  font-weight: 700;
-  color: var(--roi-highlight);
-  margin-top: 1rem;
+.video-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
 }
 
-/* ===========================
-   Dark Mode Toggle Button (Optional)
-=========================== */
-.dark-toggle {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: var(--accent-growth);
-  color: #fff;
-  padding: 0.6rem 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  z-index: 999;
+.screenshot-grid img {
+  border: 1px solid var(--card-border);
 }
-
-<button class="dark-toggle">🌙</button>
-<script>
-const toggle = document.querySelector('.dark-toggle');
-toggle.addEventListener('click', () => {
-    document.documentElement.dataset.theme =
-        document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
-});
-</script>
-
