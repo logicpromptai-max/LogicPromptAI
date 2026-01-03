@@ -290,3 +290,12 @@ section {
   cursor: pointer;
   z-index: 999;
 }
+
+<button class="dark-toggle">🌙</button>
+<script>
+const toggle = document.querySelector('.dark-toggle');
+toggle.addEventListener('click', () => {
+    document.documentElement.dataset.theme =
+        document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+});
+</script>
