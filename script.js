@@ -19,8 +19,8 @@ async function submitLead() {
 
     if(name && biz && email.includes('@')){
         try{
-            await fetch('https://sheetdb.io/api/v1/m43zmyhch2qvd', {
-                method: 'POST',
+            const response = await fetch('https://sheetdb.io/api/v1/m43zmyhch2qvd', {
+                method:'POST',
                 headers:{'Content-Type':'application/json'},
                 body: JSON.stringify({data:[{
                     "Date": new Date().toLocaleDateString(),
@@ -32,29 +32,39 @@ async function submitLead() {
                     "Potential Savings": annual
                 }]})
             });
+            if(!response.ok) throw new Error(`HTTP ${response.status}`);
             alert('Lead captured successfully!');
         } catch(e){
-            alert('Error syncing lead, but calculation is displayed.');
+            console.error('SheetDB Error:', e);
+            alert('Failed to sync lead, calculation is displayed.');
         }
+    } else {
+        alert('Please complete all fields with valid email.');
     }
 }
 
 // Lightbox
 function openLightbox(src){
     document.getElementById('lightbox-img').src = src;
-    document.querySelector('.lightbox').style.display='flex';
+    document.getElementById('lightbox').style.display='flex';
 }
 function closeLightbox(){
-    document.querySelector('.lightbox').style.display='none';
+    document.getElementById('lightbox').style.display='none';
 }
-document.addEventListener('keydown', e => {if(e.key==='Escape') closeLightbox();});
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeLightbox(); });
 
+// Intersection Observer for fade-in
+const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add("visible"); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+
+// Dark Mode Toggle
 const toggle = document.createElement('button');
-toggle.className = 'dark-toggle';
-toggle.innerText = '🌙';
+toggle.className='dark-toggle';
+toggle.innerText='🌙';
 document.body.appendChild(toggle);
-
-toggle.addEventListener('click', ()=>{
+toggle.addEventListener('click', () => {
     document.documentElement.dataset.theme =
         document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
 });
