@@ -1,41 +1,62 @@
+// -----------------------
+// ROI CALCULATOR
+// -----------------------
+function calculateSavings() {
+  const hours = parseFloat(document.getElementById("hours").value);
+  const rate = parseFloat(document.getElementById("rate").value);
+
+  if (isNaN(hours) || isNaN(rate) || hours <= 0 || rate <= 0) {
+    alert("Please enter valid numbers for hours and rate.");
+    return;
+  }
+
+  const weeklySavings = hours * rate;
+  const annualSavings = weeklySavings * 52;
+
+  document.getElementById("result").innerText =
+    `Estimated Weekly Savings: $${weeklySavings.toLocaleString()} | Annual: $${annualSavings.toLocaleString()}`;
+
+  document.getElementById("lead-capture").style.display = "block";
+}
+
+// -----------------------
+// LEAD CAPTURE (SheetDB)
+// -----------------------
 async function submitLead() {
-  const email = document.getElementById('lead-email').value;
-  const hours = document.getElementById('hours').value;
-  const rate = document.getElementById('rate').value;
-  const result = document.getElementById('result');
-  const annual = hours * rate * 52;
+  const name = document.getElementById("lead-name").value;
+  const biz = document.getElementById("lead-biz").value;
+  const email = document.getElementById("lead-email").value;
 
-  if (email.includes('@')) {
-    // Show loading state
-    result.innerText = "Processing your report...";
+  if (!name || !biz || !email) {
+    alert("Please fill out all fields.");
+    return;
+  }
 
-    const data = {
-      "Date": new Date().toLocaleDateString(),
-      "Email": email,
-      "Weekly Hours": hours,
-      "Hourly Rate": rate,
-      "Potential Savings": annual
-    };
-
-    try {
-      // REPLACE the URL below with your SheetDB API URL
-      const response = await fetch('https://sheetdb.io/api/v1/YOUR_SHEETDB_ID', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ data: [data] })
-      });
-
-      if (response.ok) {
-        result.innerText = `Estimated Annual Savings: $${annual.toLocaleString()}`;
-        document.getElementById('lead-capture').innerHTML = `
-          <p style="color: var(--accent-growth);">Success! Your report is being generated and sent to ${email}.</p>
-          <p><strong>Next Step:</strong> Book your strategy session below.</p>`;
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      result.innerText = "There was a connection error, but your ROI is: $" + annual.toLocaleString();
+  const payload = {
+    data: {
+      name: name,
+      business: biz,
+      email: email
     }
-  } else {
-    alert("Please enter a valid business email.");
+  };
+
+  try {
+    const response = await fetch("https://sheetdb.io/api/v1/m43zmyhch2qvd", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    });
+
+    if (response.ok) {
+      alert("Lead submitted successfully! We'll reach out shortly.");
+      document.getElementById("lead-name").value = "";
+      document.getElementById("lead-biz").value = "";
+      document.getElementById("lead-email").value = "";
+    } else {
+      alert("Failed to submit lead. Try again later.");
+    }
+  } catch (error) {
+    console.error(error);
+    alert("Error connecting to lead system.");
   }
 }
