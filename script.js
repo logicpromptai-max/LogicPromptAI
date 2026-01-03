@@ -19,6 +19,61 @@ function calculateSavings() {
   document.getElementById("lead-capture").style.display = "block";
 }
 
+// ROI Calculator Submission
+const roiForm = document.getElementById('roiForm');
+roiForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    // Collect input values
+    const fullName = document.getElementById('fullName').value;
+    const email = document.getElementById('email').value;
+    const businessName = document.getElementById('businessName').value;
+    const weeklyHours = parseFloat(document.getElementById('weeklyHours').value);
+    const hourlyRate = parseFloat(document.getElementById('hourlyRate').value);
+
+    // Calculate potential savings
+    const savings = (weeklyHours * hourlyRate).toFixed(2);
+
+    // Display result
+    document.getElementById('savingsAmount').textContent = savings;
+    document.getElementById('roiResult').style.display = 'block';
+
+    // Prepare payload for SheetDB
+    const payload = {
+        "data": {
+            "Date": new Date().toISOString().split('T')[0],
+            "Full Name": fullName,
+            "Email": email,
+            "Business Name": businessName,
+            "Weekly Hours": weeklyHours,
+            "Hourly Rate": hourlyRate,
+            "Potential Savings": savings
+        }
+    };
+
+    try {
+        const response = await fetch('https://sheetdb.io/api/v1/m43zmyhch2qvd', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(payload)
+        });
+
+        if (response.ok) {
+            console.log('Lead successfully captured');
+        } else {
+            console.error('Error capturing lead', response.statusText);
+        }
+    } catch (err) {
+        console.error('Network error:', err);
+    }
+
+    // Reset form after submission
+    roiForm.reset();
+});
+
+
 // -----------------------
 // LEAD CAPTURE (SheetDB)
 // -----------------------
@@ -60,3 +115,4 @@ async function submitLead() {
     alert("Error connecting to lead system.");
   }
 }
+
