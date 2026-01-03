@@ -2,44 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Systems Research | LogicPrompt AI</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research & Specs | LogicPrompt AI</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="solutions.html">Solutions</a>
-    <a href="case-studies.html">Systems Research</a>
-    <a href="index.html#schedule">Book Audit</a>
-  </nav>
+  <nav><a href="index.html">Home</a> <a href="solutions.html">Systems</a> <a href="case-studies.html">Research & Specs</a></nav>
   <h1>Systems Research & Technical Specs</h1>
-  <p style="max-width: 800px; margin: auto; color: #94a3b8; padding: 0 20px;">
-    These proof-of-concept systems demonstrate how LogicPrompt AI validates automation logic.
-  </p>
+  <p>Technical validation of logic for production-grade automation.</p>
 </header>
 
 <section class="fade-in">
-  <div class="project-card highlight" style="margin-bottom: 30px; text-align: left;">
-    <h2 style="color: var(--accent-precision);">PoC #01: Lead Intelligence Engine</h2>
-    <p><strong>Validation:</strong> Tested with simulated production inputs (50 leads/day).</p>
-    <p><strong>Architecture:</strong> Event-driven workflows reduce latency vs batch processing.</p>
+  <div class="video-grid">
+    <img src="assets/screenshots/project1.png" class="gallery-img" onclick="openLightbox(this.src)" alt="Lead Logic">
+    <img src="assets/screenshots/project2.png" class="gallery-img" onclick="openLightbox(this.src)" alt="Content Logic">
+    <img src="assets/screenshots/project3.png" class="gallery-img" onclick="openLightbox(this.src)" alt="Ops Logic">
   </div>
 
-  <div class="project-card highlight" style="margin-bottom: 30px; text-align: left;">
-    <h2 style="color: var(--accent-precision);">PoC #02: Content Multiplier</h2>
-    <p><strong>Validation:</strong> Manual QA checks on output accuracy across LinkedIn/Twitter APIs.</p>
-    <p><strong>Architecture:</strong> Modular components allow for channel swaps without a full rebuild.</p>
-  </div>
-
-  <div class="project-card highlight" style="margin-bottom: 30px; text-align: left;">
-    <h2 style="color: var(--accent-precision);">PoC #03: Ops Triage & Task Orchestration</h2>
-    <p><strong>Validation:</strong> Stress-tested against malformed inputs and duplicate submission logic.</p>
-    <p><strong>Architecture:</strong> AI-driven classification routes tasks with SLA tagging.</p>
+  <div class="project-card highlight" style="margin-top: 50px; text-align: left;">
+    <h2 style="color: var(--accent-precision);">PoC #01: AI Lead Intelligence Engine</h2>
+    <div class="spec-box">
+      <p><strong>Validation:</strong> Tested with 50+ simulated leads/day.</p>
+      <p><strong>Why This Architecture:</strong> Event-driven workflows reduce latency.</p>
+      <p><strong>Scalability:</strong> Designed for 10x lead volume.</p>
+    </div>
   </div>
 </section>
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <span class="close-btn">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+</div>
 
 <script src="script.js"></script>
 </body>
