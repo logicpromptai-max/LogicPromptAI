@@ -48,3 +48,13 @@ function closeLightbox(){
     document.querySelector('.lightbox').style.display='none';
 }
 document.addEventListener('keydown', e => {if(e.key==='Escape') closeLightbox();});
+
+const toggle = document.createElement('button');
+toggle.className = 'dark-toggle';
+toggle.innerText = '🌙';
+document.body.appendChild(toggle);
+
+toggle.addEventListener('click', ()=>{
+    document.documentElement.dataset.theme =
+        document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+});
