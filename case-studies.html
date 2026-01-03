@@ -12,71 +12,33 @@
   <nav>
     <a href="index.html">Home</a>
     <a href="solutions.html">Solutions</a>
-    <a href="case-studies.html" class="active">Systems Research</a>
+    <a href="case-studies.html">Systems Research</a>
     <a href="index.html#schedule">Book Audit</a>
   </nav>
   <h1>Systems Research & Technical Specs</h1>
-  <p style="max-width: 800px; margin: auto; color: #94a3b8;">
-    These proof-of-concept (PoC) systems demonstrate how LogicPrompt AI validates automation logic. 
+  <p style="max-width: 800px; margin: auto; color: #94a3b8; padding: 0 20px;">
+    These proof-of-concept systems demonstrate how LogicPrompt AI validates automation logic. 
     Implementations are tailored per client based on operational context.
   </p>
 </header>
 
 <section class="fade-in">
-  <div class="project-card highlight" style="margin-bottom: 40px;">
-    <h2 style="color: var(--accent-precision);">PoC #01: Autonomous Lead Intelligence Engine</h2>
-    <p><strong>The Challenge:</strong> Manual lead qualification bottlenecks sales growth, costing 15+ hours/week in data entry.</p>
-    <p><strong>The Logic:</strong> n8n workflow scrapes inbound signals, qualifies via GPT-4o, and routes "hot" leads to Slack instantly.</p>
-    
-    <div style="background: rgba(15, 23, 42, 0.5); padding: 15px; border-radius: 8px; margin: 15px 0; border-left: 4px solid var(--accent-growth);">
-        <h4 style="margin-top:0;">Why This Architecture</h4>
-        <ul style="font-size: 0.9rem; color: #cbd5e1;">
-            <li>Event-driven workflows reduce latency vs batch processing.</li>
-            <li>GPT-based qualification allows flexible criteria without constant rule updates.</li>
-        </ul>
-        <h4 style="margin-top:10px;">Validation & Testing</h4>
-        <p style="font-size: 0.9rem; color: #cbd5e1;">Tested with simulated production inputs (50-100 leads/day) with error-handling for API timeouts.</p>
-        <p style="font-size: 0.85rem; color: var(--accent-growth);"><strong>Scalability:</strong> Designed to handle 10x lead volume with zero workflow changes.</p>
+  <div class="project-card highlight" style="margin-bottom: 30px;">
+    <h2 style="color: var(--accent-precision);">PoC #01: Lead Intelligence Engine</h2>
+    <p><strong>The Challenge:</strong> Manual qualification bottlenecks sales growth.</p>
+    <div style="background: rgba(15, 23, 42, 0.5); padding: 20px; border-radius: 8px; border-left: 4px solid var(--accent-growth);">
+        <p><strong>Validation:</strong> Tested with simulated production inputs (50 leads/day).</p>
+        <p><strong>Scalability:</strong> Designed for 10x volume via event-driven n8n architecture.</p>
     </div>
   </div>
 
-  <div class="project-card highlight" style="margin-bottom: 40px;">
-    <h2 style="color: var(--accent-precision);">PoC #02: Content Multiplier Engine</h2>
-    <p><strong>The Challenge:</strong> High-ticket consultants losing 10+ hours/week formatting newsletters from video transcripts.</p>
-    <p><strong>The Logic:</strong> Multi-branch system that extracts YouTube transcripts and generates 10+ SEO-optimized social snippets.</p>
-    
-    <div style="background: rgba(15, 23, 42, 0.5); padding: 15px; border-radius: 8px; margin: 15px 0; border-left: 4px solid var(--accent-growth);">
-        <h4 style="margin-top:0;">Why This Architecture</h4>
-        <ul style="font-size: 0.9rem; color: #cbd5e1;">
-            <li>Modular components allow CRM or channel swaps without rebuilds.</li>
-            <li>Anthropic Claude 3.5 Sonnet utilized for superior long-form creative formatting.</li>
-        </ul>
-        <h4 style="margin-top:10px;">Validation & Testing</h4>
-        <p style="font-size: 0.9rem; color: #cbd5e1;">Manual QA checks on output accuracy and cross-platform formatting logic.</p>
+  <div class="project-card highlight" style="margin-bottom: 30px;">
+    <h2 style="color: var(--accent-precision);">PoC #02: Content Multiplier</h2>
+    <p><strong>The Challenge:</strong> Formatting cross-platform content manually takes 10+ hours/week.</p>
+    <div style="background: rgba(15, 23, 42, 0.5); padding: 20px; border-radius: 8px; border-left: 4px solid var(--accent-growth);">
+        <p><strong>Why This Architecture:</strong> Modular components allow for CRM or channel swaps without a full rebuild.</p>
     </div>
   </div>
-
-  <div class="project-card highlight">
-    <h2 style="color: var(--accent-precision);">PoC #03: Ops Triage & Task Orchestration</h2>
-    <p><strong>The Challenge:</strong> Operations teams lose visibility when tasks arrive from multiple channels (Email, Slack, Forms).</p>
-    <p><strong>The Logic:</strong> Central intake system normalizes requests, assigns priority via AI classification, and routes to Linear/Notion.</p>
-    
-    <div style="background: rgba(15, 23, 42, 0.5); padding: 15px; border-radius: 8px; margin: 15px 0; border-left: 4px solid var(--accent-growth);">
-        <h4 style="margin-top:0;">Why This Architecture</h4>
-        <ul style="font-size: 0.9rem; color: #cbd5e1;">
-            <li>SLA tagging ensures high-priority requests never breach response windows.</li>
-            <li>Centralized intake prevents "Shadow Ops" and fragmented communication.</li>
-        </ul>
-        <h4 style="margin-top:10px;">Validation & Testing</h4>
-        <p style="font-size: 0.9rem; color: #cbd5e1;">Stress-tested against malformed inputs and duplicate submission logic.</p>
-    </div>
-  </div>
-</section>
-
-<section style="text-align: center; padding-bottom: 80px;">
-    <h3>Want to see how this logic applies to your operation?</h3>
-    <p>We’ll map a system live before proposing anything.</p>
-    <a href="index.html#schedule" class="cta-button primary">Map Your System Live</a>
 </section>
 
 <script src="script.js"></script>
