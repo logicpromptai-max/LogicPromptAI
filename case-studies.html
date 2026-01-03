@@ -8,75 +8,156 @@
 </head>
 <body>
 
+<!-- HEADER -->
 <header>
   <nav>
     <a href="index.html">Home</a>
     <a href="solutions.html">Solutions</a>
-    <a href="case-studies.html" class="active">Systems Research</a>
-    <a href="index.html#schedule">Book Audit</a>
+    <a href="case-studies.html" class="active">Research & Specs</a>
+    <a href="#schedule">Book Audit</a>
   </nav>
   <h1>Systems Research & Technical Specs</h1>
-  <p style="max-width: 800px; margin: auto; color: #94a3b8;">
-    These proof-of-concept (PoC) systems demonstrate how LogicPrompt AI validates automation logic. 
-    Implementations are tailored per client based on operational context.
+  <p>Rigorous proof-of-concept testing for AI-driven operational scaling.</p>
+  <p style="font-style: italic; color: var(--accent-precision);">
+    These PoCs demonstrate our method. Implementations are tailored per client.
   </p>
 </header>
 
+<!-- PoCs Section -->
 <section class="fade-in">
-  <div class="project-card highlight" style="margin-bottom: 40px;">
-    <h2 style="color: var(--accent-precision);">PoC #01: Autonomous Lead Intelligence Engine</h2>
-    <p><strong>The Challenge:</strong> Manual lead qualification bottlenecks sales growth, costing 15+ hours/week in data entry.</p>
-    <p><strong>The Logic:</strong> n8n workflow scrapes inbound signals, qualifies via GPT-4o, and routes "hot" leads to Slack instantly.</p>
-    
-    <div style="background: rgba(15, 23, 42, 0.5); padding: 15px; border-radius: 8px; margin: 15px 0; border-left: 4px solid var(--accent-growth);">
-        <h4 style="margin-top:0;">Why This Architecture</h4>
-        <ul style="font-size: 0.9rem; color: #cbd5e1;">
-            <li>Event-driven workflows reduce latency vs batch processing.</li>
-            <li>GPT-based qualification allows flexible criteria without constant rule updates.</li>
-        </ul>
-        <h4 style="margin-top:10px;">Validation & Testing</h4>
-        <p style="font-size: 0.9rem; color: #cbd5e1;">Tested with simulated production inputs (50-100 leads/day) with error-handling for API timeouts.</p>
-        <p style="font-size: 0.85rem; color: var(--accent-growth);"><strong>Scalability:</strong> Designed to handle 10x lead volume with zero workflow changes.</p>
-    </div>
-  </div>
 
-  <div class="project-card highlight" style="margin-bottom: 40px;">
-    <h2 style="color: var(--accent-precision);">PoC #02: Content Multiplier Engine</h2>
-    <p><strong>The Challenge:</strong> High-ticket consultants losing 10+ hours/week formatting newsletters from video transcripts.</p>
-    <p><strong>The Logic:</strong> Multi-branch system that extracts YouTube transcripts and generates 10+ SEO-optimized social snippets.</p>
-    
-    <div style="background: rgba(15, 23, 42, 0.5); padding: 15px; border-radius: 8px; margin: 15px 0; border-left: 4px solid var(--accent-growth);">
-        <h4 style="margin-top:0;">Why This Architecture</h4>
-        <ul style="font-size: 0.9rem; color: #cbd5e1;">
-            <li>Modular components allow CRM or channel swaps without rebuilds.</li>
-            <li>Anthropic Claude 3.5 Sonnet utilized for superior long-form creative formatting.</li>
-        </ul>
-        <h4 style="margin-top:10px;">Validation & Testing</h4>
-        <p style="font-size: 0.9rem; color: #cbd5e1;">Manual QA checks on output accuracy and cross-platform formatting logic.</p>
-    </div>
-  </div>
-
+  <!-- PoC #01 -->
   <div class="project-card highlight">
-    <h2 style="color: var(--accent-precision);">PoC #03: Ops Triage & Task Orchestration</h2>
-    <p><strong>The Challenge:</strong> Operations teams lose visibility when tasks arrive from multiple channels (Email, Slack, Forms).</p>
-    <p><strong>The Logic:</strong> Central intake system normalizes requests, assigns priority via AI classification, and routes to Linear/Notion.</p>
-    
-    <div style="background: rgba(15, 23, 42, 0.5); padding: 15px; border-radius: 8px; margin: 15px 0; border-left: 4px solid var(--accent-growth);">
-        <h4 style="margin-top:0;">Why This Architecture</h4>
-        <ul style="font-size: 0.9rem; color: #cbd5e1;">
-            <li>SLA tagging ensures high-priority requests never breach response windows.</li>
-            <li>Centralized intake prevents "Shadow Ops" and fragmented communication.</li>
-        </ul>
-        <h4 style="margin-top:10px;">Validation & Testing</h4>
-        <p style="font-size: 0.9rem; color: #cbd5e1;">Stress-tested against malformed inputs and duplicate submission logic.</p>
+    <h2 style="color: var(--accent-growth);">PoC #01: Autonomous Lead Intelligence</h2>
+    <p><strong>The Challenge:</strong> Manual lead qualification bottlenecking sales team, 15+ hrs/week lost.</p>
+    <p><strong>The Logic:</strong> n8n workflow scrapes inbound signals, GPT-4o qualifies, routes hot leads to Slack instantly.</p>
+    <p><strong>Technical Stack:</strong> n8n, OpenAI API, Slack Webhooks, Custom Python Scrapers</p>
+
+    <div class="video-container">
+      <iframe width="100%" height="400" src="https://www.youtube.com/embed/fj7RFXBar8Q" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div class="spec-box">
+      <p><strong>Validation & Testing:</strong> 50–100 simulated leads/day; handles malformed inputs; manual QA for accuracy.</p>
+      <p><strong>Why This Architecture:</strong> Event-driven workflow reduces latency; GPT qualification for flexible criteria; Slack/Gmail routing reduces response time.</p>
+      <p><strong>Scalability Notes:</strong> Handles 10× lead volume; modular nodes allow CRM/channel swaps without rebuild.</p>
+    </div>
+
+    <div class="diagram-box">
+      <p><strong>Visual Logic Flow:</strong></p>
+      <pre style="background:#1e293b; padding:10px; border-radius:8px; color:#f5c26b;">
+Input → Normalize → Classify → Route → Log
+- Lead Intake
+- AI Qualification
+- Slack Routing
+- Notion Logging
+      </pre>
+    </div>
+
+    <div class="real-world-benefit">
+      <p><strong>Benefit:</strong> Saves 20–30 hours/week in lead triage; reduces missed opportunities.</p>
     </div>
   </div>
+
+  <!-- PoC #02 -->
+  <div class="project-card highlight" style="margin-top: 30px;">
+    <h2 style="color: var(--accent-growth);">PoC #02: Content Multiplier Engine</h2>
+    <p><strong>The Challenge:</strong> Consultants spend 10+ hours/week formatting newsletters from video transcripts.</p>
+    <p><strong>The Logic:</strong> Multi-branch system ingests YouTube URLs, extracts transcripts, generates SEO-optimized articles + social snippets.</p>
+    <p><strong>Technical Stack:</strong> Zapier, Claude 3.5 Sonnet, Google Docs API, Ghost CMS</p>
+
+    <div class="video-container">
+      <iframe width="100%" height="400" src="https://www.youtube.com/embed/nPURnt5qpco" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div class="spec-box">
+      <p><strong>Validation & Testing:</strong> 25–50 content submissions/day; handles malformed metadata; QA on tagging/categorization.</p>
+      <p><strong>Why This Architecture:</strong> GPT-based categorization avoids manual sorting; n8n automates repeated tasks; scalable to multiple channels (Instagram, LinkedIn, blog).</p>
+      <p><strong>Scalability Notes:</strong> Processes 5× current content volume; modular to plug in new AI models.</p>
+    </div>
+
+    <div class="diagram-box">
+      <p><strong>Visual Logic Flow:</strong></p>
+      <pre style="background:#1e293b; padding:10px; border-radius:8px; color:#f5c26b;">
+Submission → Normalize → Classify → Tag → Publish Queue
+- Content Intake
+- GPT Classification
+- Multi-channel Routing
+      </pre>
+    </div>
+
+    <div class="real-world-benefit">
+      <p><strong>Benefit:</strong> Cuts 8–12 hours/week; ensures consistent content quality across channels.</p>
+    </div>
+  </div>
+
+  <!-- PoC #03 -->
+  <div class="project-card highlight" style="margin-top: 30px;">
+    <h2 style="color: var(--accent-growth);">PoC #03: Ops Triage & Task Orchestration</h2>
+    <p><strong>The Challenge:</strong> Multi-channel task influx (email, forms, Slack) causing missed follow-ups and delayed response times.</p>
+    <p><strong>The Logic:</strong> Central intake normalizes requests, AI classification prioritizes tasks, routes them with SLA tagging to owners.</p>
+    <p><strong>Technical Stack:</strong> n8n, OpenAI API, Gmail API, Slack, Notion / Linear / ClickUp</p>
+
+    <div class="video-container">
+      <iframe width="100%" height="400" src="https://www.youtube.com/embed/5pfyEx2SWU0" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div class="spec-box">
+      <p><strong>Validation & Testing:</strong> Multi-channel test: email/forms/Slack; auto SLA tagging; QA checks on routing accuracy.</p>
+      <p><strong>Why This Architecture:</strong> Central intake reduces lost/delayed tasks; AI classification speeds decision-making; modular to integrate with Notion/Linear/ClickUp.</p>
+      <p><strong>Scalability Notes:</strong> Handles 10× task volume; nodes can be swapped for new platforms without rebuild.</p>
+    </div>
+
+    <div class="diagram-box">
+      <p><strong>Visual Logic Flow:</strong></p>
+      <pre style="background:#1e293b; padding:10px; border-radius:8px; color:#f5c26b;">
+Request → Normalize → AI Classification → Route → Log
+- Intake Normalization
+- Priority Classification
+- Routing
+- SLA Tracker
+      </pre>
+    </div>
+
+    <div class="real-world-benefit">
+      <p><strong>Benefit:</strong> Eliminates missed follow-ups; reduces operational friction and human error.</p>
+    </div>
+  </div>
+
 </section>
 
-<section style="text-align: center; padding-bottom: 80px;">
-    <h3>Want to see how this logic applies to your operation?</h3>
-    <p>We’ll map a system live before proposing anything.</p>
-    <a href="index.html#schedule" class="cta-button primary">Map Your System Live</a>
+<!-- ROI Calculator / Lead Capture -->
+<section class="fade-in" id="roi">
+  <h2>Identify Capital Leakage</h2>
+  <p>Enter your weekly manual hours & hourly rate to see your potential savings.</p>
+  <div class="calc-group">
+    <input type="number" id="hours" placeholder="Weekly Waste (Hours)">
+    <input type="number" id="rate" placeholder="Hourly Value ($)">
+    <button onclick="calculateSavings()" class="cta-button primary">Calculate ROI</button>
+  </div>
+
+  <div id="lead-capture" style="display:none; margin-top: 20px; border-top: 1px solid #334155; padding-top: 20px;">
+      <h3>Your Audit Report is Ready</h3>
+      <div class="calc-group" style="flex-direction: column; align-items: center; gap: 15px;">
+          <input type="text" id="lead-name" placeholder="Full Name" required>
+          <input type="text" id="lead-biz" placeholder="Business Name" required>
+          <input type="email" id="lead-email" placeholder="Business Email" required>
+          <button onclick="submitLead()" class="cta-button primary" style="background: var(--accent-growth); width: 100%;">Sync with LogicPrompt Systems</button>
+      </div>
+  </div>
+  <h3 id="result" class="roi-highlight"></h3>
+</section>
+
+<!-- Schedule CTA -->
+<section id="schedule" class="fade-in">
+  <h2>Map Your System Live</h2>
+  <p>In 15 minutes, we’ll map one manual process into a scalable blueprint. No proposal required — exploratory & risk-free.</p>
+  <div class="calendar-container">
+    <iframe src="https://calendar.app.google/eCpgothwnWzbKZvT6" width="100%" height="600" frameborder="0"></iframe>
+  </div>
+  <p style="margin-top:20px; color: var(--text-muted);">
+    Email: <a href="mailto:logicprompt.ai@gmail.com" style="color: var(--accent-precision);">logicprompt.ai@gmail.com</a>
+  </p>
 </section>
 
 <script src="script.js"></script>
