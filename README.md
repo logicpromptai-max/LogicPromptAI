@@ -1,34 +1,18 @@
-# LogicPrompt AI | Strategic Systems Architecture 🚀
+# LogicPrompt AI Website
 
-**LogicPrompt AI** engineers bespoke AI ecosystems and n8n workflows that recapture 20-40+ hours of manual labor per week for high-growth operations.
+## Overview
+LogicPrompt AI designs, tests, and deploys AI workflow automations to save operational time and cost. This website demonstrates our story-flow approach for visitors, aligned with SLP and behavioral psychology.
 
----
+## Features
+- **Homepage**: Visitor journey from problem awareness → understanding solution → proof → certainty → action.
+- **Solutions Page**: Detailed logic diagrams, screenshots, workflow explanation.
+- **Research & Specs**: Proof-of-concept (PoC) case studies, validation, testing, scalability notes.
+- **ROI Calculator**: Interactive tool to calculate potential time/money savings.
+- **Lead Capture**: Data submitted to [LogicPrompt_Leads API](https://sheetdb.io/api/v1/m43zmyhch2qvd).
+- **Demo Videos**: YouTube embeds showing real workflows.
+- **Gallery**: Clickable images with Esc/X exit.
 
-## 🌐 Live Infrastructure
-🔗 **Official Website:** [logicpromptai-max.github.io/LogicPromptAI/](https://logicpromptai-max.github.io/LogicPromptAI/)  
-📅 **Systems Audit:** [Book a 15-Minute Consultation](https://calendar.app.google/TSHK7KVkxbUogKcz6)
-
----
-
-## 🛠 Strategic Tech Stack
-We build for reliability, precision, and data sovereignty:
-* **Core Engine:** n8n (Advanced Logic & API Orchestration)
-* **Automation:** Zapier (Seamless Cloud Integration)
-* **Intelligence:** GPT-4o & Claude 3.5 Sonnet
-* **Data:** Private Deployments & SQL/NoSQL Architectures
-
----
-
-## 📈 Conversion Tools Built-In
-* **ROI Calculator:** A psychological anchor that identifies "Capital Leakage" and captures inbound leads.
-* **Research & Specs:** Technical Proof of Concepts (PoC) for lead intelligence and content multiplication.
-* **Live Demos:** Integrated YouTube video library for immediate technical proof.
-
----
-
-## 📧 Architecture Inquiry
-For direct inquiries or bespoke system requests, reach out at:  
-📩 **[logicprompt.ai@gmail.com](mailto:logicprompt.ai@gmail.com)**
-
----
-*© 2026 LogicPrompt AI. Systems Engineered for Scale.*
+## Contact
+- **Founder**: Klyde
+- **Email**: logicprompt.ai@gmail.com
+- **Book Live Audit**: [Google Calendar](https://calendar.app.google/eCpgothwnWzbKZvT6)
