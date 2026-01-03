@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <title>Research & Specs | LogicPrompt AI</title>
@@ -16,65 +16,47 @@
     <a href="#schedule">Book Audit</a>
   </nav>
   <h1>Systems Research & Technical Specs</h1>
-  <p>Proof-of-concept logic validated for real-world operations. Each system is stress-tested before deployment.</p>
+  <p>Rigorous PoC testing & automation architecture that saves hours and reduces errors.</p>
 </header>
 
 <section class="fade-in">
   <!-- PoC #01 -->
   <div class="project-card highlight">
-    <h2 style="color: var(--accent-growth);">PoC #01: AI Lead Intelligence Engine</h2>
-    <p><strong>Validation & Testing:</strong> 50–100 simulated leads/day, malformed input handling, QA checked.</p>
-    <p><strong>Why This Architecture:</strong> Event-driven workflow reduces latency, GPT-based qualification, Slack/Gmail routing.</p>
-    <p><strong>Scalability Notes:</strong> Handles 10× lead volume, modular CRM/channel swaps.</p>
+    <h2>PoC #01: Autonomous Lead Intelligence</h2>
+    <p><strong>Challenge:</strong> Manual lead qualification bottlenecking sales team.</p>
+    <p><strong>Logic:</strong> n8n workflow scrapes inbound signals, qualifies with GPT-4o, routes hot leads to Slack instantly.</p>
+    <p><strong>Tech Stack:</strong> n8n, OpenAI API, Python Scrapers, Slack Webhooks.</p>
     <div class="diagram-box">
-      <p><strong>Logic Flow:</strong></p>
-      <pre>Input → Normalize → Classify → Route → Log
+      <pre>
+Input → Normalize → Classify → Route → Log
 - Lead Intake
-- AI Qualification
+- GPT Qualification
 - Slack Routing
-- Notion Logging</pre>
+- Notion Logging
+      </pre>
     </div>
-    <div class="real-world-benefit">
-      <p><strong>Benefit:</strong> Saves 20–30 hours/week, reduces missed opportunities.</p>
-    </div>
+    <p class="real-world-benefit"><strong>Benefit:</strong> Saves 20–30 hours/week; reduces missed opportunities.</p>
   </div>
 
   <!-- PoC #02 -->
   <div class="project-card highlight">
-    <h2 style="color: var(--accent-growth);">PoC #02: Content Automation Engine</h2>
-    <p><strong>Validation & Testing:</strong> 25–50 submissions/day, QA on tagging & categorization.</p>
-    <p><strong>Why This Architecture:</strong> GPT-based classification, multi-channel n8n automation, scalable for new AI models.</p>
-    <p><strong>Scalability Notes:</strong> Handles 5× content volume.</p>
-    <div class="diagram-box">
-      <p><strong>Logic Flow:</strong></p>
-      <pre>Submission → Normalize → Classify → Tag → Publish Queue
-- Content Intake
-- GPT Classification
-- Multi-channel Routing</pre>
-    </div>
-    <div class="real-world-benefit">
-      <p><strong>Benefit:</strong> Cuts 8–12 hours/week, ensures consistent content quality.</p>
-    </div>
+    <h2>PoC #02: Content Automation Engine</h2>
+    <p><strong>Challenge:</strong> High-ticket consultants wasting time formatting newsletters.</p>
+    <p><strong>Logic:</strong> Ingest YouTube URLs → extract transcripts → generate SEO-optimized articles & 10+ social snippets.</p>
+    <p><strong>Tech Stack:</strong> Zapier, Claude 3.5 Sonnet, Google Docs API, Ghost CMS.</p>
   </div>
+</section>
 
-  <!-- PoC #03 -->
-  <div class="project-card highlight">
-    <h2 style="color: var(--accent-growth);">PoC #03: Ops Triage & Task Orchestration</h2>
-    <p><strong>Validation & Testing:</strong> Multi-channel task influx, auto SLA tagging, QA checked routing.</p>
-    <p><strong>Why This Architecture:</strong> Central intake reduces lost tasks, AI classification speeds decision-making, modular integration with Notion/Linear/ClickUp.</p>
-    <p><strong>Scalability Notes:</strong> Handles 10× task volume.</p>
-    <div class="diagram-box">
-      <p><strong>Logic Flow:</strong></p>
-      <pre>Request → Normalize → AI Classification → Route → Log
-- Intake Normalization
-- Priority Classification
-- Routing
-- SLA Tracker</pre>
-    </div>
-    <div class="real-world-benefit">
-      <p><strong>Benefit:</strong> Eliminates missed follow-ups, reduces friction & human error.</p>
-    </div>
-  </div>
+<section class="fade-in" style="text-align:center;">
+  <a href="index.html#schedule" class="cta-button primary">Book Live Audit</a>
+</section>
+
+<section id="schedule" class="fade-in" style="text-align:center;">
+  <h2>Map Your System Live</h2>
+  <iframe src="https://calendar.app.google/eCpgothwnWzbKZvT6" width="100%" height="600" frameborder="0"></iframe>
+  <p style="margin-top:20px;">
+    Email: <a href="mailto:logicprompt.ai@gmail.com">logicprompt.ai@gmail.com</a>
+  </p>
 </section>
 
 <script src="script.js"></script>
