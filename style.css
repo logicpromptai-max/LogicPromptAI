@@ -1,71 +1,84 @@
 :root {
-  --bg-base: #1F2933;
-  --card-bg: #2A2F36;
-  --accent-cognitive: #3B82F6;
-  --accent-precision: #F5C26B;
-  --text-primary: #F5F7FA;
+  --bg-deep: #0f172a;
+  --card-bg: #1e293b;
+  --accent-growth: #10b981;
+  --accent-precision: #fbbf24;
+  --text-primary: #f8fafc;
   --text-muted: #94a3b8;
 }
 
-body { margin:0; font-family:'Inter',sans-serif; background-color:var(--bg-base); color:var(--text-primary); line-height:1.8;}
-nav a { color:var(--text-muted); margin:0 15px; text-decoration:none; font-size:0.9rem;}
-nav a:hover { color: var(--accent-cognitive);}
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-deep);
+  color: var(--text-primary);
+  line-height: 1.8;
+}
 
-header { text-align:center; padding:80px 20px; border-bottom:1px solid #334155;}
-h1 { line-height:1.2; }
+header { text-align: center; padding: 80px 20px; border-bottom: 1px solid #334155; }
+nav a { color: var(--text-muted); margin: 0 15px; text-decoration: none; font-size: 0.95rem; }
+nav a:hover { color: var(--accent-precision); }
 
-section { max-width:1000px; margin:auto; padding:80px 20px; }
-.project-card.highlight, .poc-card { background: var(--card-bg); padding:40px; border-radius:12px; border:1px solid #334155; margin-bottom:20px; }
-.transparency-box { background: rgba(245,194,107,0.1); padding:20px; border-left:4px solid var(--accent-precision); margin-bottom:40px; }
-
-input { padding:14px; border-radius:6px; border:1px solid #334155; background:#1F2933; color:white; margin-bottom:10px; width:100%; box-sizing:border-box; }
-.cta-button { padding:16px 32px; border-radius:8px; font-weight:bold; cursor:pointer; border:none; transition:0.3s;}
-.cta-button.primary { background: var(--accent-cognitive); color:#000;}
-
-.fade-in { opacity:0; transform:translateY(20px); transition:1s ease-out;}
-.fade-in.visible { opacity:1; transform:translateY(0);}
-img { width:100%; border-radius:8px; cursor:pointer; border:1px solid #334155;}
-
-/* Project Cards & Spec Box */
+section { max-width: 1000px; margin: auto; padding: 60px 20px; }
 .project-card.highlight {
-    background: #1e293b; /* deep slate */
-    color: #f8fafc;      /* primary text color for readability */
-    padding: 40px;
-    border-radius: 12px;
-    border: 1px solid #334155;
-    margin-bottom: 20px;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  padding: 35px;
+  border-radius: 12px;
+  border: 1px solid #334155;
+  margin-bottom: 40px;
 }
 
-/* Spec Boxes inside cards */
-.spec-box p, .real-world-benefit p {
-    color: #f8fafc; /* ensure all text is visible */
-    line-height: 1.6;
-}
+.spec-box p, .real-world-benefit p { color: var(--text-primary); margin-bottom: 10px; }
 
-/* Diagram / Logic Flow Pre Blocks */
 .diagram-box pre {
-    background: #0f172a;   /* slightly darker than card for contrast */
-    color: #fbbf24;        /* brighter amber for readability */
-    padding: 15px;
-    border-radius: 8px;
-    overflow-x: auto;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 0.95rem;
+  background: #0f172a;
+  color: var(--accent-precision);
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.95rem;
+  margin-top: 10px;
 }
 
-/* Links */
-a {
-    color: #3b82f6; /* cognitive accent */
-    text-decoration: underline;
+.real-world-benefit {
+  margin-top: 15px;
+  background: #1a202e;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border-left: 4px solid var(--accent-growth);
 }
 
-/* Headers inside cards */
-.project-card h2, .project-card h3 {
-    color: #10b981; /* primary accent / growth */
+.fade-in { opacity: 0; transform: translateY(20px); transition: 1s ease-out; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+input {
+  padding: 14px;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  background: #0f172a;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-/* Calendar Section */
+.cta-button {
+  padding: 16px 32px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+}
+
+.primary { background: var(--accent-precision); color: #000; }
+.roi-highlight { color: var(--accent-growth); font-size: 2.5rem; font-weight: bold; margin-top: 20px; }
+
 .calendar-container iframe {
-    border: 2px solid #fbbf24; /* subtle highlight for attention */
-    border-radius: 8px;
+  border: 2px solid var(--accent-precision);
+  border-radius: 8px;
+  width: 100%;
+  height: 600px;
 }
