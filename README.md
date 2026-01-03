@@ -1,31 +1,34 @@
-# LogicPrompt AI Website
+# LogicPrompt AI | Strategic Systems Architecture 🚀
 
-> Strategic AI Workflow Automation. Proof-of-concept logic validated for real-world operations.
+**LogicPrompt AI** engineers bespoke AI ecosystems and n8n workflows that recapture 20-40+ hours of manual labor per week for high-growth operations.
 
-## Overview
-LogicPrompt AI designs AI-powered automation systems that recapture 20+ hours/week of manual labor. We prioritize clarity, validation, and scalability.
+---
 
-## Tech Stack
-- **Frontend:** HTML5/CSS3 (Behavioral Design Layer)
-- **Database / Leads:** Google Sheets via SheetDB API `m43zmyhch2qvd` (`LogicPrompt_Leads`)
-- **Logic Engine:** n8n (Hybrid Automation)
-- **AI Layer:** OpenAI GPT-4o / Claude 3.5 Sonnet
-- **Scheduling:** Google Calendar Embed
+## 🌐 Live Infrastructure
+🔗 **Official Website:** [logicpromptai-max.github.io/LogicPromptAI/](https://logicpromptai-max.github.io/LogicPromptAI/)  
+📅 **Systems Audit:** [Book a 15-Minute Consultation](https://calendar.app.google/TSHK7KVkxbUogKcz6)
 
-## Contact
-- **Founder:** Klyde
-- **Email:** logicprompt.ai@gmail.com
-- **Book a Systems Audit:** [Calendar](https://calendar.app.google/eCpgothwnWzbKZvT6)
+---
 
-## Behavioral & SLP Design
-- Trust → Rapport → Decision → Certainty
-- Color system, pacing, visuals, and CTAs guide visitor decisions without urgency or fear triggers.
-- Each PoC includes: Validation, Why This Architecture, Scalability, Visual Logic, Real-World Benefit.
+## 🛠 Strategic Tech Stack
+We build for reliability, precision, and data sovereignty:
+* **Core Engine:** n8n (Advanced Logic & API Orchestration)
+* **Automation:** Zapier (Seamless Cloud Integration)
+* **Intelligence:** GPT-4o & Claude 3.5 Sonnet
+* **Data:** Private Deployments & SQL/NoSQL Architectures
 
-## Notes
-- YouTube Demos: 
-  - [Lead Conversion Logic](https://youtu.be/fj7RFXBar8Q)
-  - [SaaS Activation Logic](https://youtu.be/nPURnt5qpco)
-  - [E-commerce ROI Logic](https://youtu.be/5pfyEx2SWU0)
-- ROI Calculator feeds captured leads into Google Sheets API via SheetDB.
+---
 
+## 📈 Conversion Tools Built-In
+* **ROI Calculator:** A psychological anchor that identifies "Capital Leakage" and captures inbound leads.
+* **Research & Specs:** Technical Proof of Concepts (PoC) for lead intelligence and content multiplication.
+* **Live Demos:** Integrated YouTube video library for immediate technical proof.
+
+---
+
+## 📧 Architecture Inquiry
+For direct inquiries or bespoke system requests, reach out at:  
+📩 **[logicprompt.ai@gmail.com](mailto:logicprompt.ai@gmail.com)**
+
+---
+*© 2026 LogicPrompt AI. Systems Engineered for Scale.*
