@@ -27,18 +27,23 @@
   <div class="project-card highlight">
     <h2 style="color: var(--accent-growth);">Identify Capital Leakage</h2>
     <p>Discover the annual savings potential of automating your repetitive workflows.</p>
+    
     <div class="calc-group">
       <input type="number" id="hours" placeholder="Weekly Waste (Hours)">
       <input type="number" id="rate" placeholder="Hourly Value ($)">
       <button onclick="calculateSavings()" class="cta-button primary">Calculate ROI</button>
     </div>
+
     <div id="lead-capture" style="display:none; margin-top: 20px; border-top: 1px solid #334155; padding-top: 20px;">
-        <p><strong>Your ROI Report is ready.</strong> Where should we send the full technical breakdown?</p>
-        <div class="calc-group">
-            <input type="email" id="lead-email" placeholder="Enter Business Email">
-            <button onclick="submitLead()" class="cta-button primary" style="background: var(--accent-growth);">Get Report</button>
+        <p><strong>Your ROI Report is ready.</strong> Enter your details to reveal the breakdown and secure your audit.</p>
+        <div class="calc-group" style="flex-direction: column; align-items: center; gap: 15px;">
+            <input type="text" id="lead-name" placeholder="Full Name" required style="width: 100%; max-width: 400px;">
+            <input type="text" id="lead-biz" placeholder="Business Name" required style="width: 100%; max-width: 400px;">
+            <input type="email" id="lead-email" placeholder="Business Email" required style="width: 100%; max-width: 400px;">
+            <button onclick="submitLead()" class="cta-button primary" style="background: var(--accent-growth); width: 100%; max-width: 400px;">Generate Audit Report</button>
         </div>
     </div>
+
     <h3 id="result" class="roi-highlight"></h3>
   </div>
 </section>
@@ -53,3 +58,4 @@
 <script src="script.js"></script>
 </body>
 </html>
+
