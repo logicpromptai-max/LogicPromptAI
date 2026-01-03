@@ -2,39 +2,193 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>LogicPrompt AI | Systems Overview</title>
+  <title>Research & Specs | LogicPrompt AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --bg-deep: #0f172a;
+      --card-bg: #1e293b;
+      --accent-growth: #10b981;
+      --accent-precision: #fbbf24;
+      --text-primary: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-deep);
+      color: var(--text-primary);
+      line-height: 1.8;
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px;
+      border-bottom: 1px solid #334155;
+    }
+
+    nav a {
+      color: var(--text-muted);
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    nav a:hover { color: var(--accent-precision); }
+
+    section { max-width: 1000px; margin: auto; padding: 60px 20px; }
+
+    .project-card.highlight {
+      background: var(--card-bg);
+      color: var(--text-primary);
+      padding: 35px;
+      border-radius: 12px;
+      border: 1px solid #334155;
+      margin-bottom: 40px;
+    }
+
+    .spec-box p, .real-world-benefit p {
+      color: var(--text-primary);
+      margin-bottom: 10px;
+    }
+
+    .diagram-box pre {
+      background: #0f172a;
+      color: var(--accent-precision);
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.95rem;
+      margin-top: 10px;
+    }
+
+    .real-world-benefit {
+      margin-top: 15px;
+      background: #1a202e;
+      padding: 10px 15px;
+      border-radius: 8px;
+      border-left: 4px solid var(--accent-growth);
+    }
+
+    .fade-in { opacity: 0; transform: translateY(20px); transition: 1s ease-out; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    .calendar-container iframe {
+      border: 2px solid var(--accent-precision);
+      border-radius: 8px;
+      width: 100%;
+      height: 600px;
+    }
+  </style>
 </head>
 <body>
+
 <header>
   <nav>
     <a href="index.html">Home</a>
     <a href="solutions.html">Systems</a>
     <a href="case-studies.html">Research & Specs</a>
+    <a href="#schedule">Book Audit</a>
   </nav>
-  <h1>Our AI Workflow Systems</h1>
-  <p>Validated and scalable automation solutions designed for operational clarity.</p>
+  <h1>Systems Research & Technical Specs</h1>
+  <p>Proof-of-concept logic validated for real-world operations. Each system is stress-tested before deployment.</p>
+  <p style="font-style: italic; color: var(--accent-precision);">
+    These PoCs demonstrate our method. Implementations are tailored per client.
+  </p>
 </header>
 
 <section class="fade-in">
-  <div class="video-grid">
-    <div class="project-card highlight">
-      <h3>AI Lead Conversion | $3,500</h3>
-      <p>Intake, qualification, and sales triage</p>
-      <iframe src="https://www.youtube.com/embed/fj7RFXBar8Q" frameborder="0" allowfullscreen></iframe>
+
+  <!-- PoC #01 -->
+  <div class="project-card highlight">
+    <h2 style="color: var(--accent-growth);">PoC #01: AI Lead Intelligence Engine</h2>
+    <div class="spec-box">
+      <p><strong>Validation & Testing:</strong> Tested with 50–100 simulated leads/day; handles malformed inputs; manual QA for accuracy.</p>
+      <p><strong>Why This Architecture:</strong> Event-driven workflow reduces latency; GPT qualification for flexible criteria; Slack/Gmail routing reduces response time.</p>
+      <p><strong>Scalability Notes:</strong> Handles 10× lead volume; modular nodes allow CRM/channel swaps without rebuild.</p>
     </div>
-    <div class="project-card highlight">
-      <h3>SaaS Activation Logic | $2,500</h3>
-      <p>Assistive engine for fast onboarding</p>
-      <iframe src="https://www.youtube.com/embed/nPURnt5qpco" frameborder="0" allowfullscreen></iframe>
+    <div class="diagram-box">
+      <p><strong>Visual Logic Flow:</strong></p>
+      <pre>
+Input → Normalize → Classify → Route → Log
+- Lead Intake
+- AI Qualification
+- Slack Routing
+- Notion Logging
+      </pre>
     </div>
-    <div class="project-card highlight">
-      <h3>E-commerce ROI Logic | $5,000</h3>
-      <p>Executive-level modular installation</p>
-      <iframe src="https://www.youtube.com/embed/5pfyEx2SWU0" frameborder="0" allowfullscreen></iframe>
+    <div class="real-world-benefit">
+      <p><strong>Benefit:</strong> Saves 20–30 hours/week in lead triage; reduces missed opportunities.</p>
     </div>
   </div>
+
+  <!-- PoC #02 -->
+  <div class="project-card highlight">
+    <h2 style="color: var(--accent-growth);">PoC #02: Content Automation Engine</h2>
+    <div class="spec-box">
+      <p><strong>Validation & Testing:</strong> Tested with 25–50 content submissions/day; handles malformed metadata; QA on tagging/categorization.</p>
+      <p><strong>Why This Architecture:</strong> GPT-based categorization avoids manual sorting; n8n automates repeated tasks; scalable to multiple channels (Instagram, LinkedIn, blog).</p>
+      <p><strong>Scalability Notes:</strong> Processes 5× current content volume; modular to plug in new AI models.</p>
+    </div>
+    <div class="diagram-box">
+      <p><strong>Visual Logic Flow:</strong></p>
+      <pre>
+Submission → Normalize → Classify → Tag → Publish Queue
+- Content Intake
+- GPT Classification
+- Multi-channel Routing
+      </pre>
+    </div>
+    <div class="real-world-benefit">
+      <p><strong>Benefit:</strong> Cuts 8–12 hours/week; ensures consistent content quality.</p>
+    </div>
+  </div>
+
+  <!-- PoC #03 -->
+  <div class="project-card highlight">
+    <h2 style="color: var(--accent-growth);">PoC #03: Ops Triage & Task Orchestration</h2>
+    <div class="spec-box">
+      <p><strong>Validation & Testing:</strong> Tested with multi-channel task influx: email, forms, Slack; auto SLA tagging and priority classification; QA checks on routing accuracy.</p>
+      <p><strong>Why This Architecture:</strong> Central intake reduces lost/delayed tasks; AI classification speeds decision-making; modular to integrate with Notion / Linear / ClickUp.</p>
+      <p><strong>Scalability Notes:</strong> Handles 10× task volume; nodes can be swapped for new platforms without rebuild.</p>
+    </div>
+    <div class="diagram-box">
+      <p><strong>Visual Logic Flow:</strong></p>
+      <pre>
+Request → Normalize → AI Classification → Route → Log
+- Intake Normalization
+- Priority Classification
+- Routing
+- SLA Tracker
+      </pre>
+    </div>
+    <div class="real-world-benefit">
+      <p><strong>Benefit:</strong> Eliminates missed follow-ups; reduces operational friction and human error.</p>
+    </div>
+  </div>
+
 </section>
+
+<section id="schedule" class="fade-in">
+  <h2>Map Your System Live</h2>
+  <p>In 15 minutes, we’ll map one manual process into a scalable blueprint. No proposal required — exploratory & risk-free.</p>
+  <div class="calendar-container">
+    <iframe src="https://calendar.app.google/eCpgothwnWzbKZvT6" frameborder="0"></iframe>
+  </div>
+  <p style="margin-top:20px; color: var(--text-muted);">
+    Email: <a href="mailto:logicprompt.ai@gmail.com" style="color: var(--accent-precision);">logicprompt.ai@gmail.com</a>
+  </p>
+</section>
+
+<script>
+  // Scroll Fade-in Observer
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("visible"); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+</script>
 
 </body>
 </html>
